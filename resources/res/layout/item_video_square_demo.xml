@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.macrovideo.v380pro.widgets.CustomRoundAngleImageView android:id="@+id/iv_video_square_grid_item" android:background="@drawable/shape_dome_item_rounded_corner_black_bg_5dp" android:layout_width="match_parent" android:layout_height="0dp" android:scaleType="fitXY" app:layout_constraintDimensionRatio="H, 155:89" app:layout_constraintTop_toTopOf="0" app:radius="5dp"/>
+        <com.macrovideo.v380pro.ui.textview.AutoTextView android:textSize="12sp" android:textColor="@color/color_666666" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_video_square_grid_item" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:maxWidth="130dp" android:singleLine="true" app:layout_constraintTop_toBottomOf="@+id/iv_video_square_grid_item"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/wrl_network_error_refresh" android:background="@drawable/icon_404" android:visibility="gone" android:layout_width="match_parent" android:layout_height="230dp" android:layout_marginLeft="30dp" android:layout_marginTop="50dp" android:layout_marginRight="30dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <TextView android:textSize="16sp" android:textColor="@color/color_aaaaaa" android:gravity="center" android:id="@+id/tv_network_error" android:paddingLeft="30dp" android:paddingRight="30dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/str_cloud_package_net_err_tip" android:layout_below="@+id/wrl_network_error_refresh"/>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ly_without_plan" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="175dp" android:src="@drawable/my_wallet_icon_nopackage"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_acacac" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/str_no_package"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ly_user_service_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="20dp">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_user_service_list" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+</RelativeLayout>

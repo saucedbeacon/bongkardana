@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorWhite" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="horizontal" android:paddingLeft="19dp" android:paddingTop="16dp" android:paddingRight="13dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavy" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ucloud_tottal_capacity" android:includeFontPadding="false"/>
+        <TextView android:textSize="13sp" android:textColor="@color/ColorBlue" android:gravity="center" android:id="@+id/tv_total_capacity" android:background="@drawable/shape_blue_frame_5dp" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_marginLeft="7dp" android:includeFontPadding="false"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_plan" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:layout_weight="1"/>
+</LinearLayout>

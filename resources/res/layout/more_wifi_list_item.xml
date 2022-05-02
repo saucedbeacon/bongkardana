@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/relative_bottom_sheet_wifi_list_item_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="15sp" android:textColor="@color/ColorGrayHeavier" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_bottom_sheet_wifi_list_item_name" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:layout_marginTop="17dp" android:layout_marginBottom="20dp" android:singleLine="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintHorizontal_weight="1" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/iv_bottom_sheet_wifi_list_item_signal" android:background="@drawable/devicelist_adddevice_icon_wifi5" android:layout_width="15dp" android:layout_height="11dp" android:layout_marginRight="17dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" style="@style/SplitLineStyleWith17MarginHorizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

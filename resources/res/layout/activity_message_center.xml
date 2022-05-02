@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport android:id="@+id/swipe_to_load_message_layout" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.macrovideo.v380pro.widgets.AlarmPicHeaderView android:id="@+id/swipe_refresh_header" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <RelativeLayout android:id="@+id/swipe_target" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.macrovideo.v380pro.widgets.RecyclerViewEmptySupport android:id="@+id/recycler_empty_support_recycler_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <include android:id="@+id/loading_failure_layout" android:visibility="gone" layout="@layout/common_loading_failure_layout"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_message_empty_layout" android:background="@color/ColorBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+                    <ImageView android:layout_width="100dp" android:layout_height="100dp" android:src="@drawable/common_icon_null"/>
+                    <TextView android:textSize="15sp" android:textColor="@color/ColorGrayNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/str_my_message_data_empty"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+    </com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="280dp" android:layout_height="wrap_content">
+    <ImageView android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ucloud_img_pupupsbg1"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_circular_10dp_white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="36dp" android:text="@string/str_ucloud_service"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_777777" android:gravity="center" android:layout_width="210dp" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/str_ucloud_service_in_development"/>
+        <Button android:textSize="17sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:id="@+id/tv_yes" android:layout_width="233dp" android:layout_height="43dp" android:layout_marginTop="34dp" android:layout_marginBottom="22dp" android:text="@string/str_ucloud_i_known" style="@style/RoundedCornerButtonBlueBGGradualChange"/>
+    </LinearLayout>
+</LinearLayout>

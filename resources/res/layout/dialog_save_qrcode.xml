@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:orientation="vertical" android:paddingBottom="20dp" android:layout_width="320dp" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/devicelsit_img_4g_qrcodebg" android:paddingTop="18dp" android:paddingBottom="11dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/ColorWhite" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/save_qrcode_title" android:includeFontPadding="false" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="13sp" android:textColor="@color/ColorWhite" android:id="@+id/tv_device_id" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="11dp" android:includeFontPadding="false" android:paddingStart="24dp" android:paddingEnd="24dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+        <ImageView android:id="@+id/iv_qrcode" android:layout_width="190dp" android:layout_height="190dp" android:layout_marginTop="11dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_device_id"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_bottom_rounded_corner_bg_20" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavy" android:paddingLeft="24dp" android:paddingTop="16dp" android:paddingRight="28dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/save_qrcode_tips" android:includeFontPadding="false"/>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="51dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/ColorGrayHeavy" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_common_setting_exit" android:layout_weight="1"/>
+            <View style="@style/SplitLineStyleNoMarginVertical"/>
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/ColorBlue" android:gravity="center" android:id="@+id/tv_save" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_save" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

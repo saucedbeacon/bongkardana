@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_select_device" android:layout_width="match_parent" android:layout_height="50dp">
+        <TextView android:textSize="17sp" android:textColor="@color/ColorGrayHeavier" android:layout_gravity="center" android:id="@+id/tv_device_id" android:paddingLeft="17dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12313123" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/iv_select" android:padding="7dp" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginRight="10dp" android:src="@drawable/common_btn_unselect"/>
+    </LinearLayout>
+    <View android:id="@+id/view_line" style="@style/SplitLineStyleNoMarginHorizontal"/>
+</LinearLayout>

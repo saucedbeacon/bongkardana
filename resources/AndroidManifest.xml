@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="58" android:versionName="1.4.30" android:resizeableActivity="false" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" platformBuildVersionName="11" platformBuildVersionCode="30" package="com.macrovideo.v380pro"> //���΢�� targetSdkVersion 30�Ŀͻ��˰汾������Android 11 ������ɼ��� ���Ե�Ӱ�죬\10    //��΢�Ű汾��Android 11������ϵͳ�汾���豸������ʱ����Ȩ��¼������΢��֧���ȹ����ܵ�Ӱ�죬�����޷�����ʹ��\10    //΢�ŵ�OpenSDK�Ľӿڴ����޷���������΢�ţ��Ӷ��޷�ʹ��΢�ŵĲ��ֹ��ܣ���Ҫ�������̵�AndroidManifest.xml ���������±�ǩ\10    //add 2021-11-29 
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE"/>
+    <uses-permission android:name="android.permission.OVERRIDE_WIFI_CONFIG"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
+    <uses-permission android:name="android.permission.MANAGE_APP_TOKENS"/>
+    <queries> // ָ��΢�Ű��� 
+        <package android:name="com.tencent.mm"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="com.apptouch.intent.action.update_hms"/>
+        </intent>
+        <intent>
+            <action android:name="com.huawei.appmarket.intent.action.AppDetail"/>
+        </intent>
+        <package android:name="com.hisilicon.android.hiRMService"/>
+        <intent>
+            <action android:name="com.huawei.hms.core.aidlservice"/>
+        </intent>
+        <intent>
+            <action android:name="com.huawei.hms.core"/>
+        </intent>
+    </queries>
+    <permission android:name="com.macrovideo.v380pro.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.macrovideo.v380pro.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <permission android:name="com.macrovideo.v380pro.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.macrovideo.v380pro.permission.MIPUSH_RECEIVE"/>
+    <permission android:name="com.macrovideo.v380pro.permission.PROCESS_PUSH_MSG" android:protectionLevel="signature"/>
+    <permission android:name="com.macrovideo.v380pro.permission.PUSH_PROVIDER" android:protectionLevel="signature"/>
+    <permission android:name="com.macrovideo.v380pro.permission.PUSH_WRITE_PROVIDER" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.macrovideo.v380pro.permission.PROCESS_PUSH_MSG"/>
+    <uses-permission android:name="com.macrovideo.v380pro.permission.PUSH_PROVIDER"/>
+    <uses-permission android:name="com.meizu.flyme.permission.PUSH"/>
+    <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE"/>
+    <permission android:name="com.macrovideo.v380pro.push.permission.MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.macrovideo.v380pro.push.permission.MESSAGE"/>
+    <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.macrovideo.v380pro.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.macrovideo.v380pro.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.huawei.appmarket.service.commondata.permission.GET_COMMON_DATA"/>
+    <application android:theme="@style/main_theme_dark" android:label="@string/app_name" android:icon="@drawable/ic_launch_icon" android:name="MyWrapperProxyApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="false" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@drawable/ic_logo_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true" android:preserveLegacyExternalStorage="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="notch.config" android:value="portrait|landscape"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <activity android:name="com.macrovideo.v380pro.activities.LaunchActivityAdHubOversea" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:resizeableActivity="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceListSearchActivity" android:screenOrientation="portrait" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.GroupManagementActivity" android:screenOrientation="portrait" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.AddToCompleteActivity" android:screenOrientation="portrait" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonSettingAccountInfoActivity" android:screenOrientation="portrait" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonSettingResetPasswordActivity" android:screenOrientation="portrait" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonSettingAboutActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UserAgreementActivity" android:screenOrientation="portrait" android:resizeableActivity="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.HomePageActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="locale|uiMode|layoutDirection">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.macrovideo.v380pro.activities.LoginActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.SelectAreaCodeActivity" android:launchMode="singleTask" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CaptureActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.PanoPlayerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.NormalPlayerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.MultiPlayActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageOrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceAlarmMessageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceAlarmMsgPlayShortVideoActvity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStoragePayResultActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme" android:name="com.macrovideo.v380pro.wxapi.WXPayEntryActivity" android:exported="true" android:launchMode="singleTop"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:label="WXEntryActivity" android:name="com.macrovideo.v380pro.wxapi.WXEntryActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="behind" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageRecNormalPlayerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageRecPanoPlayerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DemoPointPlayerActivity" android:screenOrientation="nosensor" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DemoCoursePlayerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.MyMessageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonQuestionsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.LearnMoreActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonSettingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.RegisterAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.ResetAccountPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.AdWebActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonWebActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.PTZXSettingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageExchangeActivity" android:screenOrientation="portrait" android:configChanges="locale|layoutDirection"/>
+        <activity android:name="com.macrovideo.v380pro.activities.WxLoginCacheActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageWebPayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudServiceClauseActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.H5PayActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize" android:hardwareAccelerated="true">
+            <intent-filter>
+                <data android:scheme="gzhspropay"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.macrovideo.v380pro.utils.updata.DownloadIntentService" android:exported="false"/>
+        <service android:name="com.macrovideo.v380pro.service.AdsInfoService" android:exported="false"/>
+        <activity android:name="com.macrovideo.v380pro.activities.PrivacyPolicyActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageClauseActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.AlbumActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.AlbumViewImageActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.AlbumPlayVideoActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.WalletMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.OrderManagementActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.WalletRechargeVCoinActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.WalletRefundActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudDeviceManagerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudUserPlanActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudStorageUserPlanActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudExchangeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudExpandPlanAcivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceUpdateTipsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceUpdateTipsActivity2" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudExchangeActivity2" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudRenewPlanActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudPayResultActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudRecPanoPlayerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize" android:hardwareAccelerated="true"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudRecNormalPlayerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize" android:hardwareAccelerated="true"/>
+        <activity android:name="com.macrovideo.v380pro.activities.WebPaymentActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudRecCatalogActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.WalletUserPlanActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.alipay.sdk.app.H5PayActivity" android:exported="false" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UserAccountSettingActivity" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CourseActivity" android:screenOrientation="behind" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceConfigSettingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.DeviceConfigAlarmAreaSelectActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.AddDeviceActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"/>
+        <activity android:name="com.macrovideo.v380pro.activities.OneKeyLoginPasswordSettingActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.UCloudManagerActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CloudVideoMessageCenterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|navigation|orientation" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CalibrateAutoZoomActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"/>
+        <activity android:name="com.macrovideo.v380pro.activities.MessageCenterActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"/>
+        <activity android:name="com.macrovideo.v380pro.activities.BatchDeleteDeviceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.macrovideo.v380pro.activities.CommonModifyPwdActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation|uiMode|screenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/jpush_notification_icon"/>
+        <service android:name="com.macrovideo.v380pro.service.JPushService" android:enabled="true" android:exported="false" android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.macrovideo.v380pro.receivers.JPushReceiverNew" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.jpush.android.service.PushReceiver" android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-9643878652905950~7987597582"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="r7tBjeKmCZ1cW0QBEVXyfJ7TVYvypNdpOovZgp9FpbgCYYHnxi"/>
+        <meta-data android:name="android.max_aspect" android:value="2.4"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/v380_file_paths"/>
+        </provider>
+        <activity android:theme="@style/EasyPermissions.Transparent" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:exported="false"/>
+        <activity android:name="com.twitter.sdk.android.core.identity.OAuthActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="orientation|screenSize"/>
+        <activity android:theme="@style/MyDialogStyle" android:name="cn.jpush.android.ui.PopWinActivity" android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="cn.jpush.android.ui.PopWinActivity"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.NoTitleBar" android:name="cn.jpush.android.ui.PushActivity" android:exported="true" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </activity>
+        <service android:name="cn.jpush.android.service.PushService" android:enabled="true" android:exported="false" android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+        <service android:name="cn.jpush.android.service.DaemonService" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="cn.jpush.android.service.DActivity" android:enabled="true" android:exported="true" android:taskAffinity="jpush.custom">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DActivity"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" android:exported="false"/>
+        <receiver android:name="cn.jpush.android.service.SchedulerReceiver" android:exported="false"/>
+        <provider android:name="cn.jpush.android.service.DataProvider" android:exported="false" android:process=":pushcore" android:authorities="com.macrovideo.v380pro.DataProvider"/>
+        <provider android:name="cn.jpush.android.service.DownloadProvider" android:exported="true" android:authorities="com.macrovideo.v380pro.DownloadProvider"/>
+        <activity android:theme="@style/JPushTheme" android:name="cn.jpush.android.service.JNotifyActivity" android:exported="true" android:taskAffinity="jpush.custom">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.JNotifyActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/JPushTheme" android:name="cn.android.service.JTransitActivity" android:exported="true" android:taskAffinity="jpush.custom">
+            <intent-filter>
+                <action android:name="cn.android.service.JTransitActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="cn.jpush.android.asus.AsusPushMessageReceiver"/>
+        <meta-data android:name="JPUSH_CHANNEL" android:value="google-play"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="d634d02d350ea27c43bfc1e3"/>
+        <meta-data android:name="XIAOMI_APPID" android:value="MI-2882303761517837062"/>
+        <meta-data android:name="XIAOMI_APPKEY" android:value="MI-5871783744062"/>
+        <service android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" android:process=":pushservice"/>
+        <service android:name="com.xiaomi.push.service.XMPushService" android:enabled="true" android:process=":pushservice"/>
+        <service android:name="com.xiaomi.mipush.sdk.PushMessageHandler" android:enabled="true" android:exported="true"/>
+        <service android:name="com.xiaomi.mipush.sdk.MessageHandleService" android:enabled="true"/>
+        <receiver android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xiaomi.push.service.receivers.PingReceiver" android:exported="false" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.jpush.android.service.PluginXiaomiPlatformsReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huawei.hms.support.api.push.PushMsgReceiver" android:permission="com.macrovideo.v380pro.permission.PROCESS_PUSH_MSG" android:exported="true" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.intent.action.PUSH_DELAY_NOTIFY"/>
+                <action android:name="com.huawei.intent.action.PUSH"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.huawei.hms.support.api.push.PushReceiver" android:permission="com.macrovideo.v380pro.permission.PROCESS_PUSH_MSG" android:exported="true" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.android.push.intent.REGISTRATION"/>
+                <action android:name="com.huawei.android.push.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.huawei.hms.support.api.push.service.HmsMsgService" android:enabled="true" android:exported="true" android:process=":pushservice" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.huawei.push.msg.NOTIFY_MSG"/>
+                <action android:name="com.huawei.push.msg.PASSBY_MSG"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.huawei.hms.support.api.push.PushProvider" android:permission="com.macrovideo.v380pro.permission.PUSH_PROVIDER" android:readPermission="com.macrovideo.v380pro.permission.PUSH_PROVIDER" android:writePermission="com.macrovideo.v380pro.permission.PUSH_WRITE_PROVIDER" android:exported="true" android:authorities="com.macrovideo.v380pro.huawei.push.provider"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:push" android:value="push:6.1.0.300"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:push:push" android:value="1"/>
+        <service android:name="cn.jpush.android.service.PluginHuaweiPlatformsService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.meizu.cloud.pushsdk.NotificationService" android:exported="true"/>
+        <receiver android:name="com.meizu.cloud.pushsdk.MzPushSystemReceiver" android:permission="com.meizu.flyme.permission.PUSH" android:exported="true">
+            <intent-filter>
+                <action android:name="com.meizu.flyme.push.intent.PUSH_SYSTEM"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.jpush.android.service.PluginMeizuPlatformsReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE"/>
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.meizu.c2dm.intent.RECEIVE"/>
+                <category android:name="com.macrovideo.v380pro"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="MEIZU_APPKEY" android:value="MZ-e3e1099c50b84e1f9f31599d3a38cfe8"/>
+        <meta-data android:name="MEIZU_APPID" android:value="MZ-114611"/>
+        <service android:name="cn.jpush.android.service.PluginOppoPushService" android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE" android:exported="true">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.heytap.msp.push.service.CompatibleDataMessageCallbackService" android:permission="com.coloros.mcs.permission.SEND_MCS_MESSAGE" android:exported="true">
+            <intent-filter>
+                <action android:name="com.coloros.mcs.action.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.heytap.msp.push.service.DataMessageCallbackService" android:permission="com.heytap.mcs.permission.SEND_PUSH_MESSAGE" android:exported="true">
+            <intent-filter>
+                <action android:name="com.heytap.mcs.action.RECEIVE_MCS_MESSAGE"/>
+                <action android:name="com.heytap.msp.push.RECEIVE_MCS_MESSAGE"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="OPPO_APPKEY" android:value="OP-8ca540cb18434431abd174782a3e6cd3"/>
+        <meta-data android:name="OPPO_APPID" android:value="OP-3691121"/>
+        <meta-data android:name="OPPO_APPSECRET" android:value="OP-dfd746eed4ef490f8489b734b120105d"/>
+        <meta-data android:name="sdkVersion" android:value="3000"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <activity android:theme="@style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.mobileadsinitprovider" android:initOrder="100"/>
+        <service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.facebook.ads.AudienceNetworkActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <provider android:name="com.facebook.ads.AudienceNetworkContentProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.AudienceNetworkContentProvider"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.macrovideo.v380pro.workmanager-init" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.macrovideo.v380pro.lifecycle-process"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false"/>
+        <receiver android:name="cn.jpush.android.service.PluginVivoMessageReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.vivo.pushclient.action.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="sdk_version_vivo" android:value="484"/>
+        <service android:name="com.vivo.push.sdk.service.CommandClientService" android:permission="com.push.permission.UPSTAGESERVICE" android:exported="true"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.vivo.push.sdk.LinkProxyClientActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <meta-data android:name="local_iv" android:value="MzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsMzIsMzgsMzcsMzYsMzUsMzQsMzMsI0AzNCwzMiwzMywzNywzMywzNCwzMiwzMywzMywzMywzNCw0MSwzNSwzNSwzMiwzMiwjQDMzLDM0LDM1LDM2LDM3LDM4LDM5LDQwLDQxLDMyLDM4LDM3LDMzLDM1LDM0LDMzLCNAMzQsMzIsMzMsMzcsMzMsMzQsMzIsMzMsMzMsMzMsMzQsNDEsMzUsMzIsMzIsMzI"/>
+        <meta-data android:name="com.vivo.push.api_key" android:value="ad59d726-6507-481b-8961-94fe6936e191"/>
+        <meta-data android:name="com.vivo.push.app_id" android:value="19486"/>
+        <service android:name="cn.jpush.android.service.PluginFCMMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.huawei.hms.aaid.InitProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.aaidinitprovider" android:initOrder="500"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:opendevice" android:value="opendevice:5.1.1.307"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:opendevice:push" android:value="1"/>
+        <meta-data android:name="com.huawei.hms.client.service.name:base" android:value="base:6.1.0.302"/>
+        <meta-data android:name="com.huawei.hms.min_api_level:base:hmscore" android:value="1"/>
+        <meta-data android:name="availableLoaded" android:value="yes"/>
+        <provider android:name="com.huawei.hms.update.provider.UpdateProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.hms.update.provider" android:grantUriPermissions="true"/>
+        <provider android:name="com.huawei.hms.device.provider.CheckHmsProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.hms.device.validate.spoofprovider" android:grantUriPermissions="false"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.huawei.updatesdk.service.otaupdate.AppUpdateActivity" android:exported="false" android:configChanges="orientation|screenSize">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent.NoTitleBar"/>
+        </activity>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.huawei.updatesdk.support.pm.PackageInstallerActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenSize">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <provider android:name="com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.updateSdk.fileProvider" android:grantUriPermissions="true"/>
+        <activity android:theme="@style/Base_Translucent" android:name="com.huawei.hms.activity.BridgeActivity" android:exported="false" android:excludeFromRecents="true" android:screenOrientation="behind" android:configChanges="locale|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|layoutDirection|fontScale" android:hardwareAccelerated="true">
+            <meta-data android:name="hwc-theme" android:value="androidhwext:style/Theme.Emui.Translucent"/>
+        </activity>
+        <activity android:name="com.huawei.hms.activity.EnableServiceActivity" android:exported="false" android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"/>
+        <provider android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" android:exported="false" android:authorities="com.macrovideo.v380pro.AGCInitializeProvider"/>
+        <service android:name="com.huawei.agconnect.core.ServiceDiscovery" android:exported="false"/>
+        <meta-data android:name="com.huawei.hms.client.appid" android:value="appid=100341009"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

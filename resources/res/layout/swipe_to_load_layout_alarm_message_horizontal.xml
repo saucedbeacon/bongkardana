@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/swipe_to_load_layout_alarm_message_horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.macrovideo.v380pro.widgets.AlarmPicHeaderView android:id="@+id/swipe_refresh_header" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <RelativeLayout android:id="@+id/swipe_target" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.macrovideo.v380pro.widgets.RecyclerViewEmptySupport android:id="@+id/recycler_empty_support_recycler_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/recycler_empty_support_empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_centerHorizontal="true">
+            <TextView android:textSize="15sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/alarm_message_data_empty"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.macrovideo.v380pro.widgets.AlarmPicFooterView android:id="@+id/swipe_load_more_footer" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport>

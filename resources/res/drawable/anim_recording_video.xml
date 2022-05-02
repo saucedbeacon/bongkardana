@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:oneshot="false">
+    <item android:duration="500" android:drawable="@drawable/shape_recording_bg_white"/>
+    <item android:duration="500" android:drawable="@drawable/shape_recording_bg_red"/>
+</animation-list>

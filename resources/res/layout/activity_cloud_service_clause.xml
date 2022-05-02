@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <ProgressBar android:id="@+id/pb_cloud_service_clause" android:layout_width="match_parent" android:layout_height="3dp" style="?android:attr/progressBarStyleHorizontal"/>
+    <WebView android:id="@+id/web_cloud_service_clause" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

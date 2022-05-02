@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_common_list_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_common_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <include android:id="@+id/common_loading_failure_layout" android:visibility="gone" layout="@layout/common_loading_failure_layout"/>
+    <include android:id="@+id/common_empty_layout" android:visibility="gone" layout="@layout/common_empty_layout"/>
+</LinearLayout>

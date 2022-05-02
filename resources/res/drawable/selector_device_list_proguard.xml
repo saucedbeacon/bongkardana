@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_enabled="true" android:state_selected="true" android:drawable="@drawable/layer_list_proguard_bf"/>
+    <item android:state_enabled="true" android:state_selected="false" android:drawable="@drawable/layer_list_proguard_cf"/>
+    <item android:state_enabled="false" android:state_selected="true" android:drawable="@drawable/layer_list_proguard_bf_dis"/>
+    <item android:state_enabled="false" android:state_selected="false" android:drawable="@drawable/layer_list_proguard_cf_dis"/>
+</selector>

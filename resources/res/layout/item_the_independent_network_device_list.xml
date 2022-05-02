@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/ll_item_all" android:background="@drawable/adddevice_img_listbg" android:layout_width="match_parent" android:layout_height="66dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+    <ImageView android:layout_gravity="center" android:layout_width="17dp" android:layout_height="21dp" android:layout_marginLeft="12dp" android:src="@drawable/adddevice_icon_cam"/>
+    <TextView android:textSize="17sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/tv_device_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="11dp" android:text="@string/device_list_device_id" android:layout_weight="1"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/iv_is_select" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="16dp" android:src="@drawable/adddevice_btn_select"/>
+</LinearLayout>

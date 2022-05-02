@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textSize="16sp" android:gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/txt_region_title" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="30dp" android:text="自动选择"/>
+    <TextView android:textSize="13sp" android:gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/txt_region_list" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="30dp" android:text="(自动选择)"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <View android:layout_marginTop="10dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:minHeight="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/str_account" android:layout_weight="1"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tv_account_info" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+        <View android:layout_marginLeft="18dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <RelativeLayout android:id="@+id/rl_common_setting_reset_password" android:background="?android:attr/selectableItemBackground" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="20dp" android:text="@string/str_common_setting_account_info_edit_pwd" android:maxLines="2" android:layout_toLeftOf="@+id/iv_common_setting_about_arrow" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            <ImageView android:id="@+id/iv_common_setting_about_arrow" android:layout_width="7dp" android:layout_height="14dp" android:src="@drawable/common_btn_next_gray" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_close_account" android:background="@color/color_ffffff" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp" android:layout_marginTop="12dp">
+        <View app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorRed" android:gravity="center_vertical" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="5dp" android:text="@string/close_account" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toLeftOf="@+id/iv_arrow"/>
+        <ImageView android:id="@+id/iv_arrow" android:layout_width="7dp" android:layout_height="14dp" android:src="@drawable/common_btn_next_gray" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

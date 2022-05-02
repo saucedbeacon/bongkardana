@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/txt_service_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="7天月套餐"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_7f000000" android:id="@+id/txt_service_effect_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="@string/str_cloud_package_effect_time"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_7f000000" android:id="@+id/txt_service_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="14dp" android:text="@string/str_effective_time" android:layout_below="@+id/txt_service_effect_time"/>
+    </LinearLayout>
+    <View android:id="@+id/view_line_buttom" style="@style/SplitLineStyleNoMarginHorizontal"/>
+</LinearLayout>

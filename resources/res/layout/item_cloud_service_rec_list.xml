@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/ll_cloud_rec_list_main_layout" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="80dp" android:layout_marginTop="1dp">
+    <RelativeLayout android:layout_gravity="center" android:id="@+id/rl_rec_icon" android:background="@color/color_b5b5b5" android:layout_width="80dp" android:layout_height="60dp" android:layout_marginLeft="6dp" android:layout_centerVertical="true">
+        <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/ucloud_replay_btn_play" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="65dp" android:layout_toLeftOf="@+id/rl_download_rec" android:layout_toRightOf="@+id/rl_rec_icon" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:text="@string/str_rec_start_time"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:id="@+id/cloud_rec_start_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:text="08:00:00"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="5" android:layout_weight="1">
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="5dp" android:text="@string/str_rec_size"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:id="@+id/cloud_rec_size" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="3dp" android:text="1.2M"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:text="@string/str_time_length"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:id="@+id/cloud_rec_time_length" android:paddingLeft="3dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="00:00:00"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:layout_gravity="center" android:id="@+id/rl_download_rec" android:layout_width="65dp" android:layout_height="90dp" android:layout_weight="2" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <Button android:textSize="11sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:id="@+id/btn_download_cloud_rec" android:background="@drawable/selector_rounded_corner_btn_blue_bg" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:text="@string/str_rec_file_showDown" android:layout_centerInParent="true" android:textAllCaps="false"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_cloud_service_download_progress_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_cloud_service_download_rec" android:layout_width="30dp" android:layout_height="30dp"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/txt_cloud_service_download_progress" android:layout_width="30dp" android:layout_height="wrap_content" android:text="0%"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

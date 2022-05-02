@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="18sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:background="@drawable/dialog_select_hour_title_bg" android:layout_width="match_parent" android:layout_height="60dp" android:text="@string/str_cloud_select_record_playback_time"/>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/optionspicker" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.bigkoo.pickerview.lib.WheelView android:id="@+id/options1" android:background="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.bigkoo.pickerview.lib.WheelView android:id="@+id/options2" android:background="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.bigkoo.pickerview.lib.WheelView android:id="@+id/options3" android:background="@color/color_ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_bottom_alarm_time_picker" android:layout_width="match_parent" android:layout_height="50dp" android:weightSum="2">
+        <Button android:textSize="16sp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/btn_cancel" android:background="?android:attr/selectableItemBackground" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/str_cancel" android:layout_weight="1" android:textAllCaps="false"/>
+        <View android:layout_width="1dp" android:layout_height="match_parent" style="@style/SplitLineStyleNoMarginVertical"/>
+        <Button android:textSize="16sp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/btn_confirm" android:background="?android:attr/selectableItemBackground" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/str_confirm" android:layout_weight="1" android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>

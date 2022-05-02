@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llSelectTime" android:background="@color/color_ffffff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50dp">
+            <TextView android:textSize="16sp" android:textColor="@color/color_666666" android:gravity="center" android:id="@+id/tv_cancel" android:paddingLeft="17dp" android:paddingRight="7dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_cancel"/>
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_set_date" android:layout_weight="1"/>
+            <TextView android:textSize="16sp" android:textColor="@color/coloe_invariant_4B89FF" android:gravity="center" android:id="@+id/tv_confirm" android:paddingLeft="7dp" android:paddingRight="17dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_confirm"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.macrovideo.v380pro.ui.WheelView android:id="@+id/WheelView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:isCyclic="false" app:itemNumber="5" app:lineColor="@color/color_a8a8a8" app:maskDarkColor="@color/color_D8ffffff" app:maskLightColor="@color/color_6affffff" app:normalTextColor="@color/color_000000" app:normalTextSize="15sp" app:selectedTextColor="@color/coloe_invariant_4B89FF" app:selectedTextSize="17sp" app:unitHeight="50dp"/>
+                <com.macrovideo.v380pro.ui.WheelView android:id="@+id/WheelView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:isCyclic="false" app:itemNumber="5" app:lineColor="@color/color_a8a8a8" app:maskDarkColor="@color/color_D8ffffff" app:maskLightColor="@color/color_6affffff" app:normalTextColor="@color/color_000000" app:normalTextSize="15sp" app:selectedTextColor="@color/coloe_invariant_4B89FF" app:selectedTextSize="17sp" app:unitHeight="50dp"/>
+                <com.macrovideo.v380pro.ui.WheelView android:id="@+id/WheelView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:isCyclic="false" app:itemNumber="5" app:lineColor="@color/color_a8a8a8" app:maskDarkColor="@color/color_D8ffffff" app:maskLightColor="@color/color_6affffff" app:normalTextColor="@color/color_000000" app:normalTextSize="15sp" app:selectedTextColor="@color/coloe_invariant_4B89FF" app:selectedTextSize="17sp" app:unitHeight="50dp"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="45dp" android:layout_centerInParent="true">
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/coloe_invariant_4B89FF" android:gravity="center" android:id="@+id/tv_unit_1" android:paddingLeft="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_year" android:layout_weight="1"/>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/coloe_invariant_4B89FF" android:gravity="center" android:id="@+id/tv_unit_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_month" android:layout_weight="1"/>
+                <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <TextView android:textSize="12sp" android:textColor="@color/coloe_invariant_4B89FF" android:gravity="center" android:id="@+id/tv_unit_3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_days" android:layout_weight="1"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

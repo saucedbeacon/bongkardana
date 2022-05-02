@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/ll_item_all" android:background="@drawable/shape_radius_13dp_white_bg" android:layout_width="match_parent" android:layout_height="68dp" android:layout_marginLeft="13dp" android:layout_marginTop="13dp" android:layout_marginRight="13dp">
+    <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_group_icon" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="13dp" android:src="@drawable/group_icon_other"/>
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/tv_group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:singleLine="true" android:layout_weight="1"/>
+    <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:layout_gravity="center_vertical" android:id="@+id/tv_device_amount" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/iv_next" android:visibility="visible" android:layout_width="17dp" android:layout_height="17dp" android:layout_marginRight="12dp" android:src="@drawable/group_btn_next"/>
+</LinearLayout>

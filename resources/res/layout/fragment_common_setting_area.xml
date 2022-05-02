@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:paddingTop="12dp" android:layout_width="match_parent" android:layout_height="32dp" android:layout_marginLeft="18dp" android:layout_marginRight="18dp" android:text="@string/str_common_setting_area_desc"/>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_common_setting_area" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <View android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+    <LinearLayout android:gravity="center" android:id="@+id/ll_device_ip_setting" android:background="?android:attr/selectableItemBackground" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_device_ip_setting"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right" android:id="@+id/tv_language_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_weight="1"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@drawable/common_btn_next_gray"/>
+    </LinearLayout>
+    <View android:id="@+id/view_line_ip_setting" android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+    <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_vocie_title" android:layout_weight="1"/>
+        <CheckBox android:id="@+id/cb_device_vocie_switch" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_device_voice_tips" android:visibility="gone" android:layout_width="match_parent" android:layout_height="58dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_device_voice_tips" android:paddingLeft="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_device_language_setting" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right" android:id="@+id/tv_device_voice_tips_content" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="123" android:layout_weight="1" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toRightOf="@+id/tv_device_voice_tips" app:layout_constraintRight_toLeftOf="@+id/iv_device_voice_tips" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/iv_device_voice_tips" android:paddingRight="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_next_gray" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+    <View android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <View android:id="@+id/view_onvif_setting" android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+    <LinearLayout android:gravity="center" android:id="@+id/ll_onvif_setting" android:background="?android:attr/selectableItemBackground" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/onvif_setting"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_weight="1"/>
+        <ImageView android:id="@+id/iv_onvif_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@drawable/common_btn_switchoff_nor"/>
+    </LinearLayout>
+    <View android:id="@+id/view_onvif_setting_and_encoding_setting" android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+    <LinearLayout android:gravity="center" android:id="@+id/ll_encoding_setting" android:background="?android:attr/selectableItemBackground" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/encoding_setting"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right" android:id="@+id/tv_encoding_setting_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_weight="1"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@drawable/common_btn_next_gray"/>
+    </LinearLayout>
+    <View android:id="@+id/view_encoding_setting" android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_video_standard" android:background="@color/color_ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="10dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_video_standard_content" android:background="?android:attr/selectableItemBackground" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/anti_flicker" android:layout_weight="1"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right" android:id="@+id/tv_video_standard_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@drawable/common_btn_next_gray"/>
+        </LinearLayout>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_999999" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="14dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/anti_flicker_DES" android:drawableLeft="@drawable/common_icon_tips_gray" android:drawablePadding="6dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_calibrate_auto_zoom" android:background="@color/color_ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="10dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_calibrate_auto_zoom_content" android:background="?android:attr/selectableItemBackground" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/calibrate_auto_zoom" android:layout_weight="1"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_666666" android:gravity="right" android:id="@+id/tv_calibrate_auto_zoom_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp"/>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:src="@drawable/common_btn_next_gray"/>
+        </LinearLayout>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    </LinearLayout>
+    <View android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

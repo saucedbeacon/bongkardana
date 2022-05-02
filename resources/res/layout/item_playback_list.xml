@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/ll_all" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="50dp">
+        <ImageView android:layout_gravity="center" android:layout_width="20dp" android:layout_height="17dp" android:layout_marginLeft="19dp" android:layout_marginRight="13dp" android:src="@drawable/ucloud_icon_file"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_gravity="center" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="center" android:layout_width="8dp" android:layout_height="14dp" android:layout_marginRight="17dp" android:src="@drawable/common_btn_next"/>
+    </LinearLayout>
+    <View android:id="@+id/view_catalog_buttom_line" android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.3dp" android:layout_marginLeft="17dp"/>
+</LinearLayout>

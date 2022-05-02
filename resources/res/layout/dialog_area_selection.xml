@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_loading_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_regionlist" android:background="@color/color_ffffff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@color/color_eeeeee" android:layout_width="match_parent" android:layout_height="55dp">
+            <ImageView android:layout_gravity="center" android:id="@+id/ivBackToLoginActivity" android:visibility="gone" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginLeft="10dp" android:src="@drawable/common_btn_back_gray" android:contentDescription=""/>
+            <TextView android:textSize="18sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/str_my_setting_area_selection" android:layout_weight="1"/>
+        </LinearLayout>
+        <View android:background="@color/color_888888" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_cc303030" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="10dp" android:text="@string/str_common_country"/>
+        <View android:background="@color/color_eeeeee" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp"/>
+        <ListView android:id="@+id/lv_region" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:divider="@null"/>
+        <FrameLayout android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                    <Button android:textSize="18sp" android:textColor="@color/color_000000" android:id="@+id/btn_regionback" android:background="@drawable/selector_new_btn_bg2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:text="@string/str_cancel" android:layout_alignParentBottom="true" android:textAllCaps="false"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

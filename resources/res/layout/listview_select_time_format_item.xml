@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_time_format" android:layout_width="match_parent" android:layout_height="55dp">
+        <TextView android:textSize="16sp" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/txt_item_index" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="55dp" android:text="自动选择"/>
+        <ImageView android:id="@+id/iv_item_index" android:visibility="visible" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/common_btn_select" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

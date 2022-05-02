@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_bound_device" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="117dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_add_device_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ucloud_btn_adddevice2" android:contentDescription="@string/str_ucloud_add_device"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_4C89FE" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_ucloud_add_device"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

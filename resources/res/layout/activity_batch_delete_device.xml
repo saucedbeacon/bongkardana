@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <LinearLayout android:id="@+id/tv_no_device" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1">
+        <TextView android:gravity="center" android:layout_gravity="center" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/no_device" android:drawableTop="@drawable/common_icon_null" android:drawablePadding="15dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_batch_delete_device_list" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_weight="1"/>
+    <View android:background="@color/color_E6E6E6" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <LinearLayout android:gravity="center" android:id="@+id/ll_bottom" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="74dp">
+        <TextView android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:id="@+id/tv_all_select" android:background="@drawable/shape_blue_21dp" android:layout_width="0dp" android:layout_height="41dp" android:layout_marginLeft="30dp" android:layout_marginRight="20dp" android:text="@string/str_album_select_all" android:layout_weight="1"/>
+        <TextView android:enabled="false" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:id="@+id/tv_delete" android:background="@drawable/shape_red_21dp" android:layout_width="0dp" android:layout_height="41dp" android:layout_marginLeft="20dp" android:layout_marginRight="30dp" android:text="@string/str_delete" android:layout_weight="1" android:alpha="0.5"/>
+    </LinearLayout>
+</LinearLayout>

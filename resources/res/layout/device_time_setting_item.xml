@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/common_selection_item_57height">
+    <View style="@style/SplitLineStyleWith17MarginLeftHorizontal"/>
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayBlack" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/txt_alarm_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="17dp" android:text="@string/str_alarm_custom" android:maxLines="2" android:layout_centerVertical="true"/>
+    <ImageView android:id="@+id/iv_delete_custom_time" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="22dp" android:button="@null" android:src="@drawable/common_btn_cancle_nor" android:layout_toLeftOf="@+id/cb_open_custom_time" android:layout_centerVertical="true"/>
+    <CheckBox android:id="@+id/cb_open_custom_time" android:background="@drawable/selector_common_circular_cb" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="17dp" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

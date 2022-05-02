@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.trustyapp.gridheaders.TrustyGridGridView android:id="@+id/gv_videos_layout" android:scrollbars="none" android:fadingEdge="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:verticalSpacing="3dp" android:numColumns="3" app:layout_constraintBottom_toTopOf="0" app:layout_constraintEnd_toStartOf="0" app:layout_constraintStart_toEndOf="0" app:layout_constraintTop_toBottomOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

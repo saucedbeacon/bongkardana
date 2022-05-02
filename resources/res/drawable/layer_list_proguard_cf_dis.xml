@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt"> //需要更换相应的图标素材 
+    <item android:height="23dp" android:width="23dp" android:drawable="@drawable/devicelist_btn_cf_dis"/>
+</layer-list>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_common_top_bar" layout="@layout/common_top_bar"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_manually_input_layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="224dp" android:layout_height="110dp" android:layout_marginTop="34dp" android:src="@drawable/adddevice_img_independentid"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_input_device_type_tips" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginBottom="26dp" android:text=""/>
+        <View android:background="@color/color_666666" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:textColorHint="@color/ColorGrayNormal" android:id="@+id/et_manually_input_id" android:background="@null" android:paddingLeft="17dp" android:layout_width="wrap_content" android:layout_height="47dp" android:hint="@string/input_device_id" android:maxLength="9" android:digits="0123456789" android:layout_weight="1" android:inputType="number"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_manually_input_delete" android:padding="7dp" android:visibility="gone" android:layout_width="29dp" android:layout_height="29dp" android:layout_marginRight="10dp" android:src="@drawable/common_input_btn_cancle"/>
+        </LinearLayout>
+        <View android:background="@color/color_666666" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_manually_input_confirm" android:background="@drawable/shape_blue_radius_20dp" android:layout_width="320dp" android:layout_height="40dp" android:layout_marginBottom="37dp" android:text="@string/str_confirm"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/fl_set_device_name" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="110dp">
+    <RelativeLayout android:id="@+id/rl_head" android:layout_width="match_parent" android:layout_height="50dp">
+        <ImageView android:id="@+id/iv_activation_icon" android:padding="5dp" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginLeft="20dp" android:src="@drawable/my_wallet_activation" android:layout_centerVertical="true"/>
+        <TextView android:textSize="14sp" android:textColor="@color/color_000000" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/txt_service_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7天月套餐" android:layout_toRightOf="@+id/iv_activation_icon" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="50dp" android:layout_below="@+id/rl_head">
+        <LinearLayout android:gravity="top|left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="50dp" android:layout_centerVertical="true">
+            <TextView android:textSize="12sp" android:textColor="@color/color_7f000000" android:id="@+id/txt_service_effect_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="60dp" android:layout_marginRight="50dp" android:text="@string/str_cloud_package_effect_time"/>
+            <TextView android:textSize="12sp" android:textColor="@color/color_7f000000" android:gravity="left" android:id="@+id/txt_service_info" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="60dp" android:layout_marginRight="50dp" android:text="@string/str_effective_time" android:layout_below="@+id/txt_service_effect_time"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <com.macrovideo.v380pro.ui.textview.RoundTextView android:gravity="center" android:id="@+id/btn_avtivate_package" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="25dp" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:Background="@color/color_0081e2" app:CornerSize="35" app:Text="@string/str_actvate" app:TextColor="@color/color_invariant_ffffff" app:TextSize="12sp"/>
+    <TextView android:textSize="14sp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/txt_use_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginRight="15dp" android:text="@string/str_in_use" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

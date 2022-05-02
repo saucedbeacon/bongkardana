@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="57dp" android:minHeight="57dp">
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_device_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="8dp" android:layout_centerVertical="true" android:drawableStart="@drawable/adddevice_nearby_icon_cam" android:layout_marginStart="17dp"/>
+    <ImageView android:id="@+id/iv_add" android:padding="7dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/adddevice_nearby_btn_add" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_alignParentEnd="true"/>
+    <View android:id="@+id/view_split" android:layout_alignParentBottom="true" android:layout_marginStart="17dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/dialog_bg_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp">
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayBlack" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/share_the_video"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_wechat_friends" android:padding="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginRight="32dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ucloud_replay_btn_wechat"/>
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayHeavy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/wechat_friends"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_copy_link" android:padding="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ucloud_replay_btn_copylink"/>
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayHeavy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/copy_link"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+    <TextView android:textSize="16sp" android:textColor="@color/ColorBlue" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/str_cancel"/>
+</LinearLayout>

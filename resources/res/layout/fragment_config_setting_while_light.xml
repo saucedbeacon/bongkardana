@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar_with_autotextview"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="20dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="42dp" android:text="@string/basic_mode"/>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:id="@+id/ll_light_auto" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_auto" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_light_auto" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:layout_marginLeft="18dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:id="@+id/ll_light_open" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_light_open" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_light_open" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:layout_marginLeft="18dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:id="@+id/ll_light_close" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_light_close" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_light_close" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="20dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="42dp" android:text="@string/timing_mode"/>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/ll_timing" android:background="@color/color_ffffff" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="68dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_timing" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/str_timing" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toLeftOf="@+id/iv_light_timing" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/timing_mode_tips" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toLeftOf="@+id/iv_light_timing" app:layout_constraintTop_toBottomOf="@+id/tv_timing"/>
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_light_timing" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_switchoff_nor" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_select_time" android:background="@color/color_ffffff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <View android:layout_marginLeft="18dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:id="@+id/ll_start_time" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_start_time" android:layout_weight="1"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayNormal" android:gravity="center_vertical" android:id="@+id/tv_start_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/please_set" android:drawableRight="@drawable/common_btn_next_gray" android:drawablePadding="10dp"/>
+        </LinearLayout>
+        <View android:layout_marginLeft="18dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <LinearLayout android:id="@+id/ll_end_time" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/str_end_time" android:layout_weight="1"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayNormal" android:gravity="center_vertical" android:id="@+id/tv_end_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/please_set" android:drawableRight="@drawable/common_btn_next_gray" android:drawablePadding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_light_sensitivity" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginTop="10dp">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_light_sensitivity" android:paddingLeft="18dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/str_motion_sensitivity_setting" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toLeftOf="@+id/tv_light_sensitivity_content" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:paddingLeft="18dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="@string/str_motion_sensitivity_setting_tips" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toLeftOf="@+id/tv_light_sensitivity_content" app:layout_constraintTop_toBottomOf="@+id/tv_light_sensitivity"/>
+        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayNormal" android:gravity="center_vertical" android:id="@+id/tv_light_sensitivity_content" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="18dp" android:text="" android:drawableRight="@drawable/common_btn_next_gray" android:drawablePadding="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <View app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

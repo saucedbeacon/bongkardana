@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_item_root" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="70dp" android:paddingStart="16dp" android:paddingEnd="16dp">
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ptzx_cruise_route_setting" android:layout_centerVertical="true"/>
+    <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="right" android:id="@+id/tv_auto_cruise_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_centerVertical="true" android:layout_marginEnd="10dp" android:layout_toStartOf="@+id/iv_auto_cruise_go"/>
+    <ImageView android:id="@+id/iv_auto_cruise_go" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_next" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

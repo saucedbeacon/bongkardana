@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/dialog_bg_20dp" android:paddingBottom="20dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp">
+    <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="50dp">
+        <LinearLayout android:gravity="center" android:id="@+id/ll_calendar_date_pre" android:layout_width="50dp" android:layout_height="match_parent">
+            <ImageView android:background="@drawable/alarmnews_btn_premonth" android:layout_width="20dp" android:layout_height="20dp"/>
+        </LinearLayout>
+        <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_calendar_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="53dp" android:layout_marginRight="53dp" android:text="2019-10-15" android:layout_weight="1"/>
+        <LinearLayout android:gravity="center" android:id="@+id/ll_calendar_date_next" android:layout_width="50dp" android:layout_height="match_parent">
+            <ImageView android:background="@drawable/alarmnews_btn_nextmonth" android:layout_width="20dp" android:layout_height="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/color_FAFAFA" android:layout_width="match_parent" android:layout_height="44dp">
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_sunday" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_monday" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_tuesday" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_wednesday" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_thursday" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_friday" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/color_5A5A5A" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/calendar_saturday" android:layout_weight="1"/>
+    </LinearLayout>
+    <com.macrovideo.v380pro.ui.calendar.CalendarPager android:id="@+id/cp_calendar_view" android:layout_width="match_parent" android:layout_height="273dp"/>
+</LinearLayout>

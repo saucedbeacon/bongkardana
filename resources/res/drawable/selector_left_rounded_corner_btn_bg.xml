@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="46dp" android:bottomLeftRadius="46dp"/>
+            <stroke android:width="0.4dp" android:color="@color/color_invariant_20000000"/>
+            <solid android:color="@color/color_ffffff"/>
+            <size android:height="@dimen/dimen_rounded_corner_btn_height"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:topLeftRadius="46dp" android:bottomLeftRadius="46dp"/>
+            <stroke android:width="0.4dp" android:color="@color/color_invariant_20000000"/>
+            <solid android:color="@color/color_invariant_20000000"/>
+            <size android:height="@dimen/dimen_rounded_corner_btn_height"/>
+        </shape>
+    </item>
+</selector>

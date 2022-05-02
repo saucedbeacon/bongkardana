@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/stream_select_pw_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="12dp" android:paddingEnd="12dp">
+    <TextView android:textSize="15sp" android:textColor="@color/selector_stream_select" android:id="@+id/tv_hd" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_HD"/>
+    <TextView android:textSize="15sp" android:textColor="@color/selector_stream_select" android:id="@+id/tv_sd" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_SD"/>
+    <TextView android:textSize="15sp" android:textColor="@color/selector_stream_select" android:id="@+id/tv_auto" android:padding="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_auto"/>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_ucloud_plan_expired" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_ucloud_plan_empty_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/iv_no_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="148dp" android:src="@drawable/ucloud_icon_nodigital" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="15sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_no_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19dp" android:text="@string/str_ucloud_no_data" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/iv_no_login"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include android:id="@+id/layout_load_fail" android:visibility="gone" layout="@layout/layout_ucloud_load_failure"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

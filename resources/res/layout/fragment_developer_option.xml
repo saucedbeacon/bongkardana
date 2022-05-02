@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/ColorBackground" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="使用V30设备登录协议" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_use_v30_login" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定转发服务器(Kill掉APP重启生效)" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_forward_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定云存储搜索回放服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_forward_server_cloud" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_cloud_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="port："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_cloud_port" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定云盘回放服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_forward_server_ucloud" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_ucloud_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="port："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_ucloud_port" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定计费系统服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_forward_server_billing_system" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="host："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_billing_system_host" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定OSS服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_forward_server_oss" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="host："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_oss_host" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="port："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_forward_server_oss_port" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定云盘下载服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_ucloud_download_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_ucloud_download_server_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定自主广告服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_ad_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_ad_server_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="app_id："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_ad_app_id" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ver_id："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_ad_ver_id" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <Button android:layout_gravity="center" android:id="@+id/btn_save_ad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存"/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定4g服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_4g_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_4g_server_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <Button android:layout_gravity="center" android:id="@+id/btn_save_4g" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存"/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定流量查询服务器" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_query_flow_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_query_flow_server_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <Button android:layout_gravity="center" android:id="@+id/btn_save_query_flow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存"/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginLeft="18dp" android:text="指定测试版本号"/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="测试版本号："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_test_version" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <Button android:layout_gravity="center" android:id="@+id/tv_save_test_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="保存"/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="是否预览未出图可点击其他功能" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_live_can_click_other_function" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定调度服务器(Kill掉APP重启生效)" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_dispatch_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_dispatch_server_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="是否显示设备登录出图时间" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_open_perview_time" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="指定报警消息服务器(Kill掉APP重启生效)" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_assign_alarm_message_server" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="ip："/>
+                <EditText android:gravity="end" android:id="@+id/et_assign_alarm_message_ip" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_customized_ad_interval" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="自定义热启动广告间隔(Kill掉APP自动失效)" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_customized_ad_interval" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="自定义时间间隔（单位:ms）："/>
+                <EditText android:gravity="end" android:id="@+id/et_customized_ad_interval" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="number"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="模拟流量套餐剩余天数(kill掉自动失效)" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_flow_expired_time" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="套餐剩余天数（默认0，单位：天）："/>
+                <EditText android:gravity="end" android:id="@+id/et_flow_expired_time" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="number"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:background="@color/ColorBackground" android:paddingLeft="18dp" android:paddingTop="12dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="32dp" android:text=""/>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="模拟剩余流量(kill掉自动失效)" android:layout_weight="1"/>
+                <CheckBox android:id="@+id/cb_flow_remain" android:background="@drawable/selector_device_setting_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:button="@null"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginLeft="18dp"/>
+            <LinearLayout android:gravity="center" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="58dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="50dp" android:text="剩余流量（默认0，单位：M）："/>
+                <EditText android:gravity="end" android:id="@+id/et_flow_remain" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:inputType="number"/>
+            </LinearLayout>
+            <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

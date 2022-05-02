@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:id="@+id/fl_device_list_ad_container_classic" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_margin="10dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintDimensionRatio="h,338:95" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+            <com.macrovideo.v380pro.widgets.CustomRoundAngleImageView android:id="@+id/iv_device_list_ad_content_classic" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" app:radius="7dp"/>
+            <ImageView android:layout_gravity="top|right|center_vertical|center_horizontal|center|end" android:id="@+id/iv_device_list_ad_close_classic" android:padding="5dp" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:src="@drawable/devicelist_btn_closead" android:layout_marginEnd="5dp"/>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/fl_ad_banner_container_list_mode" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:minHeight="51dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <ImageView android:id="@+id/iv_banner_ad_close" android:visibility="invisible" android:layout_width="14dp" android:layout_height="14dp" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:src="@drawable/devicelist_btn_closead" app:layout_constraintRight_toRightOf="@+id/fl_ad_banner_container_list_mode" app:layout_constraintTop_toTopOf="@+id/fl_ad_banner_container_list_mode"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

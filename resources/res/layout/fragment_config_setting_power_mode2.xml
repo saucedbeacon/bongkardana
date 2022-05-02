@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_power_mode" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13sp" android:text="@string/power_mode_setting_title" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_current_mode" android:background="@color/ColorForeground" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp">
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center_vertical" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+                        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/power_mode_current" android:layout_weight="1"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavy" android:gravity="end" android:id="@+id/tv_current_mode" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_battery_and_smart_mode" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp">
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_battery_mode" android:paddingTop="15dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_battery_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_mode_battery"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_battery_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/power_mode_battery_desc2_content"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/iv_select_battery" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+                    </LinearLayout>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="16dp"/>
+                    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_smart_mode" android:paddingTop="15dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+                        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_smart_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_mode_smart2"/>
+                            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_smart_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/power_mode_smart_desc"/>
+                        </LinearLayout>
+                        <ImageView android:id="@+id/iv_select_smart" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+                    </LinearLayout>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_timer_mode" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_timer_mode_item" android:background="@color/ColorForeground" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+                        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/power_mode_time_period_setting" android:layout_weight="1"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavy" android:gravity="right" android:id="@+id/tv_timer_mode" android:layout_width="0dp" android:layout_height="wrap_content" android:drawablePadding="5dp" android:layout_weight="1" android:drawableEnd="@drawable/common_btn_next_gray"/>
+                    </LinearLayout>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/ColorGrayNormal" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_timer_mode_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:drawablePadding="5dp" android:drawableStart="@drawable/common_icon_tips" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_go_record_setting" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+                    <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13sp" android:text="@string/power_mode_record_setting" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="7dp"/>
+                    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_go_record_setting_item" android:background="@color/ColorForeground" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+                        <TextView android:textSize="16sp" android:textColor="@color/ColorBlue" android:gravity="left" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/power_mode_go_record_setting" android:layout_weight="1"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavy" android:gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="5dp" android:drawableEnd="@drawable/common_btn_next_gray"/>
+                    </LinearLayout>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_power_mode_timer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13sp" android:text="@string/power_timer_effective_time" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/ll_time_mode" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp">
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_time_mode_item" android:background="@color/ColorForeground" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+                        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/power_timer_time_mode_title" android:layout_weight="1"/>
+                        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavy" android:gravity="right" android:id="@+id/tv_time_mode" android:layout_width="0dp" android:layout_height="wrap_content" android:drawablePadding="5dp" android:layout_weight="1" android:drawableEnd="@drawable/common_btn_next_gray"/>
+                    </LinearLayout>
+                    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+                    <TextView android:textSize="13sp" android:textColor="@color/ColorGrayNormal" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_time_mode_desc" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:drawablePadding="5dp" android:drawableStart="@drawable/common_icon_tips" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+                </LinearLayout>
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_set_time_period_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25sp" android:text="@string/power_timer_set_time_period_title" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_timer_period" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:overScrollMode="never"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

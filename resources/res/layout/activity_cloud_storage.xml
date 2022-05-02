@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_cloud_service_top_bar" layout="@layout/common_top_bar"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_select_cloud_storage_plan_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="16sp" android:textColor="@color/color_666666" android:gravity="center_vertical" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="44dp" android:text="@string/str_select_cloud_plan_title" android:includeFontPadding="false"/>
+            <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_cloud_storage_plan_not_bind_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="21dp" android:layout_weight="1">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_cloud_storage_plan_list" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="120dp">
+            <Button android:id="@+id/btn_go_to_mall" android:visibility="visible" android:layout_width="match_parent" android:text="@string/str_purchase_new_package" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/RoundedCornerButtonBlueBG"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_without_cloud_storage_plan_layout" android:background="@color/color_00000000" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:layout_width="163dp" android:layout_height="94dp" android:src="@drawable/ucloud_icon_nodevicetoadd"/>
+            <TextView android:textSize="15sp" android:textColor="@color/ColorGrayNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_without_cloud_storage_plan_tips"/>
+            <com.macrovideo.v380pro.ui.textview.AutoTextView android:textSize="15sp" android:gravity="center" android:id="@+id/tv_buy_cloud_storage_plan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/str_go_to_buy_cloud_storage_plan" android:maxLines="1" style="@style/RoundedCornerWhiteBGBlueFrame"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include android:id="@+id/cl_loading_failure_layout" android:visibility="gone" layout="@layout/common_loading_failure_layout"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_select_device_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/color_ffffff" android:paddingLeft="16dp" android:paddingTop="14dp" android:paddingRight="16dp" android:paddingBottom="14dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_cloud_storage_plan_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7天云存储套餐" android:includeFontPadding="false"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_777777" android:id="@+id/tv_cloud_storage_plan_introduce" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="保存7天录像" android:includeFontPadding="false"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_777777" android:id="@+id/tv_cloud_storage_plan_effective_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="2019/06/20 - 2019/07/20" android:includeFontPadding="false"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textColor="@color/color_666666" android:gravity="center_vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="44dp" android:text="@string/str_select_device_to_bind_cloud_storage_plan"/>
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_select_device_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <include android:id="@+id/without_device_layout" layout="@layout/common_without_device_select"/>
+    </LinearLayout>
+    <ScrollView android:id="@+id/sv_cloud_storage_plan_info_layout" android:background="@color/color_title_ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="21dp" android:layout_below="@+id/rl_cloud_service_top_bar" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="55dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:paddingRight="22dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="@string/str_cloud_service" android:includeFontPadding="false" android:layout_centerVertical="true"/>
+                <CheckBox android:id="@+id/cb_cloud_service_bind_switch" android:background="@drawable/selector_device_setting_switch" android:layout_width="45dp" android:layout_height="25dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:checked="true" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <RelativeLayout android:id="@+id/rl_cloud_service_sms_service_setting" android:visibility="gone" android:layout_width="match_parent" android:layout_height="55dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:paddingRight="22dp" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginLeft="22dp" android:text="@string/str_cloud_sms_service_setting" android:includeFontPadding="false" android:layout_centerVertical="true"/>
+                <CheckBox android:id="@+id/cb_cloud_service_open_sms_service_switch" android:background="@drawable/selector_device_setting_switch" android:layout_width="45dp" android:layout_height="25dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:checked="false" android:button="@null" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View android:id="@+id/view_sms_service_line" android:visibility="gone" style="@style/SplitLineStyleMargin22Horizontal"/>
+            <RelativeLayout android:id="@+id/rl_cloud_storage_search_rec" android:layout_width="match_parent" android:layout_height="55dp">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:paddingRight="22dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="@string/str_seach_cloud_record" android:includeFontPadding="false" android:layout_centerVertical="true"/>
+                <ImageView android:id="@+id/iv_cloud_service_search_record_arrow" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/common_btn_next" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                <View android:visibility="gone" android:layout_height="1dp" android:layout_marginTop="20dp" android:layout_below="@+id/iv_cloud_service_search_record_arrow" style="@style/SplitLineStyleWithMarginHorizontal"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:background="@color/color_20000001" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="16sp" android:textColor="@color/color_000000" android:gravity="center" android:id="@+id/txt_cloud_service_day_count" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_000000" android:gravity="center" android:id="@+id/txt_cloud_service_package_name" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_000000" android:gravity="center" android:id="@+id/txt_cloud_service_package_effective_start_time" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_000000" android:gravity="center" android:id="@+id/txt_cloud_service_package_effective_end_time" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_000000" android:gravity="center" android:id="@+id/txt_cloud_service_package_function" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Button android:id="@+id/btn_cloud_service_renew_the_package" android:layout_width="match_parent" android:layout_marginTop="20dp" android:text="@string/str_renew_the_package" style="@style/RoundedCornerButtonBlueBG"/>
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="21dp" android:text="@string/str_renew_the_package_tip" android:includeFontPadding="false"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_cloud_service_search_rec_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_cloud_service_top_bar" android:layout_alignParentBottom="true">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_search_rec_info_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_cloud_storage_search_rec_deviceid" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="46dp" android:layout_marginLeft="22dp" android:text="@string/str_search_cloud_rec" android:includeFontPadding="false" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <LinearLayout android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_cloud_storage_search_rec_deviceid">
+                <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="46dp">
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="@string/str_rec_type" android:includeFontPadding="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="@string/str_alarm_rec" android:includeFontPadding="false" android:layout_alignParentRight="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View style="@style/SplitLineStyleMarginLeft20Horizontal"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_search_rec_select_date_layout" android:layout_width="match_parent" android:layout_height="46dp">
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="@string/str_select_rec_date" android:includeFontPadding="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:id="@+id/txt_cloud_service_rec_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:text="2018-03-28" android:includeFontPadding="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <ImageView android:layout_width="8dp" android:layout_height="14dp" android:layout_marginRight="17dp" android:src="@drawable/common_btn_next" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View style="@style/SplitLineStyleMarginLeft20Horizontal"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/rl_search_rec_begin_time_layout" android:layout_width="match_parent" android:layout_height="46dp">
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="@string/str_rec_start_time" android:includeFontPadding="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:id="@+id/txt_cloud_service_rec_starttime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:includeFontPadding="false" android:layout_toLeftOf="@+id/iv_cloud_service_search_record_arrow3" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <ImageView android:id="@+id/iv_cloud_service_search_record_arrow3" android:layout_width="8dp" android:layout_height="14dp" android:layout_marginRight="17dp" android:src="@drawable/common_btn_next" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <View style="@style/SplitLineStyleMarginLeft20Horizontal"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/rl_search_rec_end_time_layout" android:layout_width="match_parent" android:layout_height="46dp">
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="@string/str_rec_end_time" android:includeFontPadding="false" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <TextView android:textColor="@color/ColorGrayHeavier" android:id="@+id/txt_cloud_service_rec_endtime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30dp" android:layout_toLeftOf="@+id/iv_cloud_service_search_record_arrow4" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                    <ImageView android:id="@+id/iv_cloud_service_search_record_arrow4" android:layout_width="8dp" android:layout_height="14dp" android:layout_marginRight="17dp" android:src="@drawable/common_btn_next" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <Button android:id="@+id/btn_search_rec" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="93dp" android:text="@string/str_search_file" app:layout_constraintBottom_toBottomOf="0" style="@style/RoundedCornerButtonBlueBG"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_cloud_storage_rec_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/dialog_bg_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+    <ImageView android:layout_gravity="center_horizontal" android:id="@+id/iv_scan_gif" android:layout_width="267dp" android:layout_height="87dp" android:layout_marginTop="38dp"/>
+    <TextView android:textSize="15sp" android:textColor="@color/color_666666" android:gravity="center" android:id="@+id/tv_scan_qr_code_tips" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="29dp" android:text="@string/add_device_scan_qr_code_tips"/>
+    <View android:background="@color/color_E6E6E6" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginTop="40dp"/>
+    <TextView android:textSize="16sp" android:textColor="@color/ColorBlue" android:gravity="center" android:id="@+id/tv_i_known" android:visibility="visible" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/str_ucloud_i_known"/>
+</LinearLayout>

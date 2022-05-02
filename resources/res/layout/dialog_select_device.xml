@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="45dp" android:text="@string/str_select_device"/>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_selece_device_list" android:background="@color/color_F3F3F3" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_without_device_to_bind" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+        <include layout="@layout/common_without_device_select"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View android:id="@+id/view_line_buttom" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_confirm" android:background="@drawable/shape_corner" android:layout_width="308dp" android:layout_height="42dp" android:layout_marginTop="13dp" android:layout_marginBottom="27dp" android:text="@string/str_confirm"/>
+</LinearLayout>

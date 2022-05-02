@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport android:id="@+id/swipe_to_load_layout_nearby_device" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.macrovideo.v380pro.widgets.AlarmPicHeaderView android:id="@+id/swipe_refresh_header" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/swipe_target" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/recycler_empty_support_empty_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayNormal" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tv_no_device" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="100dp" android:text="@string/device_search_no_device_try_refresh" android:drawableTop="@drawable/common_icon_null" android:drawablePadding="14dp"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_title" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="@string/device_search_total_found_some_device" android:layout_marginStart="17dp"/>
+            <View android:layout_marginTop="7dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <com.macrovideo.v380pro.widgets.RecyclerViewEmptySupport android:id="@+id/recycler_empty_support_recycler_view" android:background="@color/ColorForeground" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:splitMotionEvents="false"/>
+            <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        </LinearLayout>
+    </com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport>
+</LinearLayout>

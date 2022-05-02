@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/author_login_dialog_loading_bg" android:layout_width="140dp" android:layout_height="120dp">
+        <ProgressBar android:layout_width="60dp" android:layout_height="60dp" android:indeterminateDrawable="@drawable/rotate_loading_dialog" android:indeterminateDuration="1800"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:ellipsize="end" android:gravity="center" android:id="@+id/txt_loading_dialog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:text="@string/str_loading" android:singleLine="true"/>
+    </LinearLayout>
+</RelativeLayout>

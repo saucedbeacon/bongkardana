@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_title_ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/rl_common_top_bar" layout="@layout/common_top_bar"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_manually_input_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="224dp" android:layout_height="110dp" android:layout_marginTop="34dp" android:src="@drawable/adddevice_img_independentid"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_input_device_type_tips" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginBottom="26dp" android:text=""/>
+        <View android:background="@color/color_666666" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:textColorHint="@color/ColorGrayNormal" android:id="@+id/et_manually_input_id" android:background="@null" android:paddingLeft="17dp" android:layout_width="wrap_content" android:layout_height="47dp" android:hint="@string/input_device_id" android:maxLength="9" android:digits="0123456789" android:layout_weight="1" android:inputType="number"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_manually_input_delete" android:padding="7dp" android:visibility="gone" android:layout_width="29dp" android:layout_height="29dp" android:layout_marginRight="10dp" android:src="@drawable/common_input_btn_cancle"/>
+        </LinearLayout>
+        <View android:background="@color/color_666666" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_manually_input_confirm" android:background="@drawable/shape_blue_radius_20dp" android:layout_width="320dp" android:layout_height="40dp" android:layout_marginBottom="37dp" android:text="@string/str_confirm"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_search_equipment_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_gravity="center" android:layout_width="188dp" android:layout_height="188dp" android:layout_marginTop="21dp">
+            <ImageView android:id="@+id/iv_top_search" android:layout_width="188dp" android:layout_height="188dp" android:src="@drawable/adddevice_img_searching" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_in_the_search" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="@string/in_the_search"/>
+        <TextView android:id="@+id/tv_search_equipment_amount" android:paddingLeft="23dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="21dp" android:layout_marginBottom="12dp" android:text="@string/search_listings"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_search_equipment_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="15sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_search_equipment_manually_add" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text="@string/there_are_unadded_devices"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:id="@+id/tv_search_equipment_accomplish" android:background="@color/coloe_invariant_4B89FF" android:layout_width="match_parent" android:layout_height="47dp" android:text="@string/str_finish"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_manually_add_id_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="224dp" android:layout_height="110dp" android:layout_marginTop="34dp" android:src="@drawable/adddevice_img_independentid"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:layout_marginBottom="26dp" android:text="@string/input_the_independent_network_camera_id"/>
+        <View android:background="@color/color_666666" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:textColorHint="@color/ColorGrayNormal" android:id="@+id/et_manually_add_id_input" android:background="@null" android:paddingLeft="17dp" android:layout_width="wrap_content" android:layout_height="47dp" android:hint="@string/input_device_id" android:maxLength="9" android:digits="0123456789" android:layout_weight="1" android:inputType="number"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_manually_add_id_delete" android:padding="7dp" android:visibility="gone" android:layout_width="29dp" android:layout_height="29dp" android:layout_marginRight="10dp" android:src="@drawable/common_input_btn_cancle"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_manually_add_id_scan" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="21dp" android:layout_marginRight="20dp" android:src="@drawable/adddevice_btn_scan"/>
+        </LinearLayout>
+        <View android:background="@color/color_666666" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+        <TextView android:id="@+id/tv_manually_add_id_amount" android:paddingLeft="23dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="21dp" android:layout_marginBottom="12dp" android:text="@string/search_listings"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_manually_add_id_id_list" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_manually_add_id_add" android:background="@drawable/shape_blue_radius_20dp" android:layout_width="320dp" android:layout_height="40dp" android:layout_marginTop="10dp" android:layout_marginBottom="11dp" android:text="@string/str_add"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_manually_add_id_accomplish" android:background="@drawable/shape_blue_radius_20dp" android:layout_width="320dp" android:layout_height="40dp" android:layout_marginBottom="18dp" android:text="@string/str_finish"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/fl_set_device_name" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

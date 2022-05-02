@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <ImageView android:layout_gravity="center" android:layout_width="83dp" android:layout_height="83dp" android:layout_marginTop="100dp" android:src="@drawable/set_check_icon_update"/>
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/str_start_device_upgrade"/>
+    <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:paddingLeft="40dp" android:paddingRight="40dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/str_device_upgrade_tips"/>
+    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_device_update_tips_ikonw" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginBottom="23dp" android:text="@string/str_ucloud_i_known" style="@style/RoundedCornerButtonBlueBG"/>
+</LinearLayout>

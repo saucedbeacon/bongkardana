@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <TextView android:textSize="15sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_add_timer_time" android:paddingTop="20dp" android:paddingBottom="20dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="40dp" android:text="@string/power_timer_add_time_period" android:drawablePadding="5dp" android:drawableStart="@drawable/set_alarm_icon_addtime" android:paddingStart="16dp" android:paddingEnd="16dp"/>
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</LinearLayout>

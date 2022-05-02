@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/dialog_bg_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="20dp">
+    <TextView android:textSize="15sp" android:textColor="@color/ColorGrayHeavy" android:gravity="center" android:id="@+id/tv_title" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:text=""/>
+    <View android:visibility="gone" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_options_list" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+    <RelativeLayout android:id="@+id/rl_button" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp">
+        <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/ColorGrayHeavy" android:gravity="center" android:id="@+id/tv_cancel" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/str_cancel" android:layout_toStartOf="@+id/view_split_button_vertical" android:layout_alignParentStart="true"/>
+        <View android:id="@+id/view_split_button_vertical" android:visibility="visible" android:layout_centerHorizontal="true" style="@style/SplitLineStyleNoMarginVertical"/>
+        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/ColorBlue" android:gravity="center" android:id="@+id/tv_confirm" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/str_confirm" android:layout_toEndOf="@+id/view_split_button_vertical" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+</LinearLayout>

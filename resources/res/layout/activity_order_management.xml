@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/color_title_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/iv_group_icon_2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:src="@drawable/common_btn_back_gray" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+        <com.google.android.material.tabs.TabLayout android:id="@+id/tabLayout" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_toLeftOf="@+id/iv_right" android:layout_toRightOf="@+id/iv_group_icon_2" app:tabBackground="@color/color_invariant_00000000" app:tabGravity="1" app:tabIndicatorColor="@color/color_0081e2" app:tabIndicatorFullWidth="false" app:tabMode="1" app:tabPaddingEnd="12dp" app:tabPaddingStart="12dp" app:tabRippleColor="@color/color_invariant_00000000" app:tabSelectedTextColor="@color/color_0081e2" app:tabTextAppearance="@style/TabLayoutTextStyle_16SP" app:tabTextColor="@color/ColorGrayHeavier">
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_order"/>
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_ucloud_package_renew"/>
+        </com.google.android.material.tabs.TabLayout>
+        <ImageView android:id="@+id/iv_right" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17dp" android:src="@drawable/ucloud_order_btn_filter" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <View android:layout_alignParentBottom="true" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewPager" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_plan_detail_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_weight="1">
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_activation_status" android:padding="5dp" android:layout_width="40dp" android:layout_height="30dp" android:src="@drawable/my_wallet_activation"/>
+                <TextView android:textSize="14sp" android:textColor="@color/color_000000" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_plan_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="7天月套餐" android:includeFontPadding="false"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="left|center_vertical|center_horizontal|center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_centerVertical="true">
+                <TextView android:textSize="11sp" android:textColor="@color/color_7f000000" android:id="@+id/tv_plan_effect_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/str_cloud_package_effect_time" android:includeFontPadding="false"/>
+                <TextView android:textSize="11sp" android:textColor="@color/color_7f000000" android:id="@+id/tv_plan_effect_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/str_effective_time" android:includeFontPadding="false"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="14sp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/tv_plan_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:text="@string/str_in_use" android:includeFontPadding="false"/>
+    </LinearLayout>
+    <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+</android.widget.LinearLayout>

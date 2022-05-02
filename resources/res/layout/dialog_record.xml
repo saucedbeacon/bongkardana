@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="bottom" android:layout_gravity="center" android:orientation="vertical" android:layout_width="330dp" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_bg_20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+            <TextView android:textSize="17sp" android:textStyle="bold" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_record_file_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="record file name" android:maxLines="1" android:singleLine="true"/>
+            <ImageView android:id="@+id/iv_rechristen" android:padding="4dp" android:layout_width="28dp" android:layout_height="28dp" android:src="@drawable/set_alarmset_edit"/>
+        </LinearLayout>
+        <com.macrovideo.v380pro.ui.RecordButton android:layout_gravity="center" android:id="@+id/record_button" android:layout_width="90dp" android:layout_height="90dp" android:layout_marginTop="2dp" app:excircleOffset="1dp" app:excircleRadiusEnd="33dp" app:excircleRadiusStart="33dp" app:incircleOffset="2dp" app:incircleRadiusEnd="22dp" app:incircleRadiusStart="27dp"/>
+        <TextView android:textSize="13sp" android:textColor="@color/ColorGrayNormal" android:gravity="center" android:id="@+id/tv_click_tips" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="14dp" android:text="@string/click_on_the_audition"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_bg_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp">
+        <TextView android:textSize="16sp" android:textColor="@color/coloe_invariant_4B89FF" android:gravity="center" android:id="@+id/tv_save" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/str_save"/>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+        <TextView android:textSize="16sp" android:textColor="@color/coloe_invariant_4B89FF" android:gravity="center" android:id="@+id/tv_save_and_apply" android:layout_width="match_parent" android:layout_height="50dp" android:text="@string/save_and_apply"/>
+    </LinearLayout>
+    <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_cancel" android:background="@drawable/dialog_bg_20dp" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:text="@string/str_cancel"/>
+</LinearLayout>

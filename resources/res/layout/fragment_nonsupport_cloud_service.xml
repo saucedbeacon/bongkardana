@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_title_ffffff" android:paddingTop="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_nonsupport_cloud_service" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="95dp" android:layout_height="55dp" android:layout_marginTop="240dp" android:src="@drawable/ucloud_icon_noucloud"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayNormal" android:gravity="center" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/cannot_cloud_service"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_load_fail" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="17sp" android:textColor="@color/ColorGrayHeavier" android:gravity="center" android:id="@+id/tv_load_fail_title" android:background="@color/color_ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:text="@string/str_fragment_ucloud" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <View android:background="@color/color_BBBBBB" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.4dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_load_fail_title"/>
+        <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" layout="@layout/layout_ucloud_load_failure"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_no_device" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center" android:layout_width="186dp" android:layout_height="140dp" android:layout_marginTop="150dp" android:src="@drawable/cloud_icon_adddevice"/>
+        <TextView android:textSize="15sp" android:textColor="@color/ColorGrayNormal" android:gravity="center" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/user_cloud_service_add_device_tips"/>
+    </LinearLayout>
+</LinearLayout>

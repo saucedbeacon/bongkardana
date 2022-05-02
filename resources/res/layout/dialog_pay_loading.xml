@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/iv_pay_loading" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginTop="26dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+    <TextView android:textSize="20dp" android:textColor="@color/color_000000" android:id="@+id/tv_pay_loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/str_pay_loading" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/iv_pay_loading"/>
+    <TextView android:layout_width="match_parent" android:layout_height="270dp" android:editable="false" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_pay_loading"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

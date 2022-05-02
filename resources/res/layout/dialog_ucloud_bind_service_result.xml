@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/dialog_bg_20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:layout_marginRight="17dp" android:layout_marginBottom="20dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toTopOf="0">
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="26dp" android:text="@string/ucloud_bind_result"/>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_device_list" android:layout_width="match_parent" android:layout_height="210dp" android:layout_marginLeft="13dp" android:layout_marginTop="14dp" android:layout_marginRight="13dp"/>
+        <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_confirm" android:layout_width="wrap_content" android:layout_height="43dp" android:layout_marginLeft="97dp" android:layout_marginTop="27dp" android:layout_marginRight="97dp" android:layout_marginBottom="21dp" android:minWidth="133dp" android:text="@string/str_confirm" style="@style/RoundedCornerWhiteBlueBG"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

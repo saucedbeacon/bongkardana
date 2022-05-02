@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/dialog_base_bg" android:layout_width="match_parent" android:layout_height="310dp">
+    <TextView android:textSize="18sp" android:textColor="@color/color_invariant_ffffff" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_dialog_base_title" android:background="@drawable/shape_top_alarm_time_picker" android:paddingLeft="20dp" android:paddingTop="15dp" android:paddingRight="20dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/str_set_time_zone" android:singleLine="true"/>
+    <ListView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:ellipsize="end" android:gravity="center" android:id="@+id/lv_time_zone_list" android:background="@drawable/shape_bottom_alarm_time_picker" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

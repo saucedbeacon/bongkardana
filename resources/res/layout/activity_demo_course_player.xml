@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <FrameLayout android:id="@+id/fl_demo_course_player_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="6">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.macrovideo.v380pro.widgets.FullScreenVideoView android:id="@+id/video_view_demo_course" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <ProgressBar android:id="@+id/pb_demo_course" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/rotate_loading_dialog" android:indeterminateDuration="1800" android:layout_centerInParent="true"/>
+            <RelativeLayout android:id="@+id/rl_demo_course_bottom_menu" android:background="@color/color_invariant_88000000" android:paddingLeft="20dp" android:paddingTop="8dp" android:paddingRight="20dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <ImageView android:id="@+id/iv_demo_course_play_pause" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/demo_btn_play" android:layout_alignParentLeft="true"/>
+                <ImageView android:id="@+id/iv_demo_course_change_orientation" android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/alarmnewslist_btn_fullscreen_white" android:layout_alignParentRight="true"/>
+                <ImageView android:id="@+id/iv_demo_course_voice" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="20dp" android:src="@drawable/preview_btn_openvoice_white" android:layout_toLeftOf="@+id/iv_demo_course_change_orientation"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_demo_course_bottom" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="11">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_demo_course_desc" android:background="@color/color_ffffff" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <TextView android:textSize="16sp" android:textColor="@color/color_CC000000" android:ellipsize="end" android:layout_gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/str_video_square_course_desc" android:singleLine="true"/>
+            <View android:layout_marginLeft="20dp" android:layout_marginRight="20dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <ScrollView android:layout_width="match_parent" android:layout_height="100dp">
+                <TextView android:textSize="14sp" android:textColor="@color/color_CC000000" android:id="@+id/tv_demo_course_desc" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </ScrollView>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/rl_demo_course_others" android:background="@color/color_ffffff" android:paddingLeft="20dp" android:paddingRight="20dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp">
+            <ImageView android:id="@+id/iv_demo_course_others_icon" android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/demo_icon_tutorial" android:layout_alignTop="@+id/tv_demo_course_others_title" android:layout_alignBottom="@+id/tv_demo_course_others_title"/>
+            <TextView android:textSize="16sp" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tv_demo_course_others_title" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/str_video_square_course" android:maxLines="2" android:layout_toRightOf="@+id/iv_demo_course_others_icon" android:layout_toEndOf="@+id/iv_demo_course_others_icon"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_demo_course_others" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/tv_demo_course_others_title"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

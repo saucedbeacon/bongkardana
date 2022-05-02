@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:weightSum="2">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@drawable/shape_top_alarm_time_picker" android:layout_width="250dp" android:layout_height="60dp">
+        <TextView android:textSize="18dp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/str_end_time"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="2">
+        <TimePicker android:id="@+id/end_time_picker" android:layout_width="match_parent" android:layout_height="wrap_content" android:calendarViewShown="false" android:timePickerMode="spinner"/>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_bottom_alarm_time_picker" android:layout_width="match_parent" android:layout_height="60dp" android:weightSum="2">
+        <Button android:textSize="18dp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/btn_cancel" android:background="?android:attr/selectableItemBackground" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/str_cancel" android:layout_weight="1" android:textAllCaps="false"/>
+        <View android:layout_width="1dp" android:layout_height="match_parent" style="@style/SplitLineStyleNoMarginVertical"/>
+        <Button android:textSize="18dp" android:textColor="@color/color_0081e2" android:gravity="center" android:id="@+id/btn_confirm" android:background="?android:attr/selectableItemBackground" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/str_confirm" android:layout_weight="1" android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>

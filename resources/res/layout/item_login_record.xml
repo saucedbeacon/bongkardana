@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/color_ffffff" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="50dp">
+    <ImageView android:layout_width="25dp" android:layout_height="25dp" android:src="@drawable/my_set_icon_loginrecord"/>
+    <TextView android:textSize="16sp" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_login_record_from" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:singleLine="true" android:layout_weight="1"/>
+    <TextView android:textSize="14sp" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/tv_login_record_time" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:singleLine="true"/>
+</LinearLayout>

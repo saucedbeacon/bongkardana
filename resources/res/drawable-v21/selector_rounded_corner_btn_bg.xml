@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:color="@color/color_eeeeee" android:radius="@dimen/dimen_rounded_corner_btn_radius">
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dimen_rounded_corner_btn_radius"/>
+            <stroke android:width="0.4dp" android:color="@color/ColorGrayHeavier"/>
+            <solid android:color="@color/color_title_ffffff"/>
+            <size android:height="@dimen/dimen_rounded_corner_btn_height"/>
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dimen_rounded_corner_btn_radius"/>
+            <stroke android:width="0.3dp" android:color="@color/ColorGrayLighter"/>
+            <solid android:color="@color/color_title_ffffff"/>
+            <size android:height="@dimen/dimen_rounded_corner_btn_height"/>
+        </shape>
+    </item>
+</ripple>

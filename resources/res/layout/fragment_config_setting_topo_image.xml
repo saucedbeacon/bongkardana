@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <com.macrovideo.v380pro.ui.MindMapView android:id="@+id/topo_image" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_error_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:layout_width="130dp" android:layout_height="140dp" android:layout_marginTop="150dp" android:src="@drawable/common_icon_nonetwork"/>
+        <TextView android:textSize="15sp" android:textColor="@color/ColorGrayNormal" android:layout_gravity="center" android:id="@+id/tv_no_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/str_ucloud_load_fail"/>
+        <TextView android:textSize="15sp" android:textColor="@color/ColorBlue" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_reload" android:background="@drawable/btn_bg_ucloud_selector" android:paddingLeft="18dp" android:paddingRight="18dp" android:layout_width="wrap_content" android:layout_height="32dp" android:layout_marginTop="17dp" android:text="@string/str_ucloud_reload"/>
+    </LinearLayout>
+</LinearLayout>

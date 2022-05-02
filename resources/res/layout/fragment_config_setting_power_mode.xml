@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_current_mode" android:background="@color/ColorForeground" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <LinearLayout android:gravity="center_vertical" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/power_mode_current" android:layout_weight="1"/>
+            <TextView android:textSize="13sp" android:textColor="@color/ColorGrayHeavy" android:gravity="end" android:id="@+id/tv_current_mode" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/ll_smart_mode" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <LinearLayout android:gravity="center_vertical" android:paddingTop="15dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_mode_smart"/>
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/power_mode_smart_desc"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/iv_select_smart" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_battery_and_long_mode" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_battery_mode" android:paddingTop="15dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_battery_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_mode_battery"/>
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_battery_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/power_mode_battery_desc"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/iv_select_battery" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginStart="16dp"/>
+        <LinearLayout android:gravity="center_vertical" android:id="@+id/ll_long_mode" android:paddingTop="15dp" android:paddingBottom="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="16dp" android:paddingEnd="16dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_long_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/power_mode_long"/>
+                <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_long_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/power_mode_long_desc"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/iv_select_long" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    </LinearLayout>
+</LinearLayout>

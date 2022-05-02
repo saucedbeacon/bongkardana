@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ProgressBar android:id="@+id/progress_bar" android:layout_width="match_parent" android:layout_height="3dp" style="?android:attr/progressBarStyleHorizontal"/>
+    <com.macrovideo.v380pro.widgets.LollipopFixedWebView android:id="@+id/web_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_network_error_layout" android:background="@color/ColorBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+            <ImageView android:id="@+id/iv_network_error" android:background="@drawable/icon_404" android:layout_width="156dp" android:layout_height="98dp"/>
+            <TextView android:textSize="16sp" android:textColor="@color/color_aaaaaa" android:id="@+id/tv_network_error" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19dp" android:text="@string/str_network_error_tips" android:includeFontPadding="false" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/iv_network_error"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

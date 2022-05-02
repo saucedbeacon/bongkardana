@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/color_ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/rl_logout_user" android:paddingLeft="35dp" android:paddingRight="35dp" android:layout_width="match_parent" android:layout_height="70dp">
+        <ImageView android:id="@+id/iv_account_icon" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/my_icon_exitac" android:layout_centerVertical="true"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/str_my_setting_logout" android:maxLines="2" android:layout_toRightOf="@+id/iv_account_icon" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <View android:id="@+id/view_split_dialog_base_horizontal" style="@style/SplitLineStyleNoMarginHorizontal"/>
+    <RelativeLayout android:id="@+id/rl_exit_app" android:paddingLeft="35dp" android:paddingRight="35dp" android:layout_width="match_parent" android:layout_height="70dp">
+        <ImageView android:id="@+id/iv_exit_icon" android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/my_icon_exit" android:layout_centerVertical="true"/>
+        <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/str_my_setting_exit" android:maxLines="2" android:layout_toRightOf="@+id/iv_exit_icon" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

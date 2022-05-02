@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.macrovideo.v380pro.widgets.PasswordEditText android:textColor="#00ffffff" android:id="@+id/et_password" android:background="@null" android:longClickable="false" android:layout_width="match_parent" android:layout_height="40dp" android:cursorVisible="false" android:maxLength="6" android:layout_centerInParent="true" android:inputType="number" android:textIsSelectable="false"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="22sp" android:gravity="center" android:id="@+id/tv_pass1" android:background="@drawable/shape_password_unselected" android:longClickable="false" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="14dp" android:cursorVisible="false" android:maxLength="6" android:inputType="numberPassword" android:textIsSelectable="false"/>
+        <TextView android:textSize="22sp" android:gravity="center" android:id="@+id/tv_pass2" android:background="@drawable/shape_password_unselected" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="14dp"/>
+        <TextView android:textSize="22sp" android:gravity="center" android:id="@+id/tv_pass3" android:background="@drawable/shape_password_unselected" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="14dp"/>
+        <TextView android:textSize="22sp" android:gravity="center" android:id="@+id/tv_pass4" android:background="@drawable/shape_password_unselected" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="14dp"/>
+        <TextView android:textSize="22sp" android:gravity="center" android:id="@+id/tv_pass5" android:background="@drawable/shape_password_unselected" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="14dp"/>
+        <TextView android:textSize="22sp" android:gravity="center" android:id="@+id/tv_pass6" android:background="@drawable/shape_password_unselected" android:layout_width="40dp" android:layout_height="40dp"/>
+    </LinearLayout>
+</RelativeLayout>

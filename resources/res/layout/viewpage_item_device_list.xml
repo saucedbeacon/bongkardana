@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport android:id="@+id/swipe_to_load_layout_device_list" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/swipe_target" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.macrovideo.v380pro.widgets.RecyclerViewEmptySupport android:id="@+id/recycler_empty_support_recycler_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never" android:splitMotionEvents="false"/>
+            <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/recycler_empty_support_empty_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="50dp" android:layout_marginBottom="150dp">
+                    <ImageView android:id="@+id/iv_device_list_no_device" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/devicelist_icon_nodevice"/>
+                    <TextView android:textSize="16sp" android:textColor="@color/color_999999" android:id="@+id/tv_group_no_device_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:text="@string/group_no_device"/>
+                    <TextView android:textSize="16sp" android:textColor="@color/color_invariant_ffffff" android:gravity="center" android:id="@+id/tv_group_management" android:background="@drawable/shape_rounded_corner_25dp_blue" android:paddingLeft="40dp" android:paddingRight="40dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginTop="24dp" android:text="@string/grou_management"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </com.macrovideo.v380pro.widgets.SwipeToLoadLayoutRecyclerEmptyViewSupport>
+</LinearLayout>

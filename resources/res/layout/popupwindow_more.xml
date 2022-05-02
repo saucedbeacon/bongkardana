@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="bottom" android:orientation="vertical" android:paddingLeft="13dp" android:paddingRight="13dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_pop_more" android:layout_width="match_parent" android:layout_height="134dp">
+        <TextView android:textSize="17sp" android:textColor="@color/color_333333" android:gravity="center" android:id="@+id/tv_scan" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/str_more_menu_scan" android:layout_weight="1"/>
+        <TextView android:textSize="17sp" android:textColor="@color/color_333333" android:gravity="center" android:id="@+id/tv_add" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/str_more_menu_add_device" android:layout_weight="1"/>
+    </LinearLayout>
+    <TextView android:textSize="17sp" android:textColor="@color/color_333333" android:gravity="center" android:id="@+id/tv_cancel" android:background="@drawable/shape_pop_more" android:layout_width="match_parent" android:layout_height="60dp" android:layout_marginTop="14dp" android:text="@string/str_cancel"/>
+</LinearLayout>

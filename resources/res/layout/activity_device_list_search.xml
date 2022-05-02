@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="51dp">
+        <LinearLayout android:background="@drawable/shape_rounded_corner_bg_2" android:layout_width="0dp" android:layout_height="40dp" android:layout_marginLeft="18dp" android:layout_weight="1">
+            <EditText android:textSize="15dp" android:gravity="center_vertical" android:id="@+id/et_search" android:background="@null" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:hint="@string/search_device_hint" android:maxLength="16" android:drawableLeft="@drawable/devicelist_icon_search" android:drawablePadding="6dp" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_clean" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:src="@drawable/common_btn_clear"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textColor="@color/color_666666" android:id="@+id/tv_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13sp" android:layout_marginRight="18dp" android:text="@string/str_cancel"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/fl_device_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

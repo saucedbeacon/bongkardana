@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/common_top_bar" layout="@layout/common_top_bar"/>
+    <TextView android:textColor="@color/ColorGrayNormal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:text="@string/pir_tips" android:paddingStart="17dp" android:paddingEnd="17dp"/>
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+    <LinearLayout android:orientation="vertical" android:background="@color/ColorForeground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_close" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="57dp" android:paddingStart="17dp" android:paddingEnd="17dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/str_pir_sensitivity_close" android:singleLine="true" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_select_close" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginStart="17dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_hight" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="57dp" android:paddingStart="17dp" android:paddingEnd="17dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/str_sensitivity_high" android:singleLine="true" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_select_high" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginStart="17dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_normal" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="57dp" android:paddingStart="17dp" android:paddingEnd="17dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/str_sensitivity_normal" android:singleLine="true" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_select_normal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+        <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp" android:layout_marginStart="17dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_low" android:background="?android:attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="57dp" android:paddingStart="17dp" android:paddingEnd="17dp">
+            <TextView android:textSize="16sp" android:textColor="@color/ColorGrayHeavier" android:gravity="left" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/str_sensitivity_low" android:singleLine="true" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center" android:id="@+id/iv_select_low" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/common_btn_tick"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/ColorGrayLighter" android:layout_width="match_parent" android:layout_height="0.4dp"/>
+</LinearLayout>

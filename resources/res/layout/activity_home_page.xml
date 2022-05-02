@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/ColorBackground" android:layout_width="match_parent" android:layout_height="match_parent" android:splitMotionEvents="false">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_homepage_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:id="@+id/fl_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <View style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <com.google.android.material.tabs.TabLayout android:id="@+id/bottom_tab_bar" android:background="@color/color_title_ffffff" android:visibility="visible" android:layout_width="match_parent" android:layout_height="55dp" android:splitMotionEvents="false"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_third_ad_layout" android:background="@color/color_invariant_ffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/iv_launch_background" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+            <FrameLayout android:id="@+id/fl_ad_container" android:background="@color/color_invariant_00000000" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toTopOf="@+id/gl_ad_logo" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <androidx.constraintlayout.widget.Guideline android:orientation="horizontal" android:id="@+id/gl_ad_logo" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintGuide_percent="0.8"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_ad_logo" android:background="@color/color_ad_logo_layout_bg" android:visibility="invisible" android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/gl_ad_logo">
+                <TextView android:textSize="10sp" android:textColor="@color/color_invariant_ffffff" android:background="@drawable/shape_ad_tag_bg" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_marginRight="3dp" android:text="@string/ad_tag" android:includeFontPadding="false" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <ImageView android:layout_width="74dp" android:layout_height="72dp" android:src="@drawable/ad_icon_logo" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

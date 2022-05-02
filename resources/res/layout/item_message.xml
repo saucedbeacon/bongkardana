@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/view_top" android:visibility="gone" android:layout_width="match_parent" android:layout_height="13dp"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/shape_corner_white" android:paddingLeft="18dp" android:paddingTop="15dp" android:paddingRight="18dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:layout_marginRight="13dp" android:layout_marginBottom="13dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_title" android:layout_width="24dp" android:layout_height="24dp"/>
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/ColorGrayBlack" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:text="消息标题"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textColor="@color/ColorGrayHeavier" android:id="@+id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23dp" android:text="消息内容..."/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_operation_layout1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="27dp">
+            <View app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <TextView android:textSize="12sp" android:textColor="@color/ColorBlue" android:id="@+id/tv_operation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="操作" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <ImageView android:layout_width="6dp" android:layout_height="12dp" android:src="@drawable/common_btn_next_gray" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_operation_layout2" android:paddingBottom="22dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="37dp">
+            <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/gl_center" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintGuide_percent="0.5"/>
+            <TextView android:textSize="16sp" android:textColor="@drawable/selector_btn_text_color_red" android:gravity="center" android:id="@+id/tv_refuse" android:background="@drawable/selector_btn_frame_bg" android:layout_width="120dp" android:layout_height="47dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toLeftOf="@+id/gl_center" app:layout_constraintTop_toTopOf="0"/>
+            <TextView android:textSize="16sp" android:textColor="@drawable/selector_btn_text_color_white" android:gravity="center" android:id="@+id/tv_confirm" android:background="@drawable/selector_btn_bule_bg" android:layout_width="120dp" android:layout_height="47dp" app:layout_constraintLeft_toRightOf="@+id/gl_center" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_operation_layout3" android:visibility="gone" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginTop="27dp">
+            <View app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" style="@style/SplitLineStyleNoMarginHorizontal"/>
+            <TextView android:textSize="12sp" android:textColor="@color/ColorGrayNormal" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
