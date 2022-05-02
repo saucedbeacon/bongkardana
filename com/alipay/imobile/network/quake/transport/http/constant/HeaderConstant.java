@@ -1,0 +1,42 @@
+package com.alipay.imobile.network.quake.transport.http.constant;
+
+public class HeaderConstant {
+    public static final String DEFAULT_CHARSET = "UTF-8";
+    public static final String HEADER_KEY_APPID = "AppId";
+    public static final String HEADER_KEY_APPKEY = "AppKey";
+    public static final String HEADER_KEY_APP_KEY = "App-Key";
+    public static final Object HEADER_KEY_CHARSET = "Charset";
+    public static final String HEADER_KEY_CLIENT_ID = "clientId";
+    public static final String HEADER_KEY_CONTENT_ENCODING = "Content-Encoding";
+    public static final String HEADER_KEY_CONTENT_TYPE = "Content-Type";
+    public static final String HEADER_KEY_CONTROL = "Control";
+    public static final String HEADER_KEY_COOKIE = "Cookie";
+    public static final String HEADER_KEY_DID = "did";
+    public static final String HEADER_KEY_ETAG = "ETag";
+    public static final String HEADER_KEY_ID = "id";
+    public static final String HEADER_KEY_IF_MODIFIED_SINCE = "If-Modified-Since";
+    public static final String HEADER_KEY_IF_NONE_MATCH = "If-None-Match";
+    public static final String HEADER_KEY_MEMO = "Memo";
+    public static final String HEADER_KEY_MGW_TRACE_ID = "Mgw-TraceId";
+    public static final String HEADER_KEY_OPERATION_TYPE = "operationType";
+    public static final String HEADER_KEY_REQ_DATA = "requestData";
+    public static final String HEADER_KEY_RESULT_STATUS = "Result-Status";
+    public static final String HEADER_KEY_RPCID = "RpcId";
+    public static final String HEADER_KEY_SENCE = "scene";
+    public static final String HEADER_KEY_SERVER_TIME = "Server-Time";
+    public static final String HEADER_KEY_SET_COOKIE = "Set-Cookie";
+    public static final String HEADER_KEY_SIGN = "sign";
+    public static final String HEADER_KEY_TENANT_ID = "tenantId";
+    public static final String HEADER_KEY_TIPS = "Tips";
+    public static final String HEADER_KEY_TRACKERID = "TrackerId";
+    public static final String HEADER_KEY_TS = "ts";
+    public static final String HEADER_KEY_UUID = "uuid";
+    public static final String HEADER_KEY_VERSION = "version";
+    public static final String HEADER_KEY_WORKSPACE_ID = "workspaceId";
+    public static final String HEADER_VALUE_CONTENT_ENCODING_GZIP = "gzip";
+    public static final String HEADER_VALUE_JSON_TYPE = "application/json";
+    public static final String HEADER_VALUE_OLD_TYPE = "application/x-www-form-urlencoded";
+    public static final String HEADER_VALUE_PB_TYPE = "application/protobuf";
+    public static final String HEADER_VALUE_RPC_VERSION_1_0 = "1";
+    public static final String HEADER_VALUE_RPC_VERSION_2 = "2";
+}

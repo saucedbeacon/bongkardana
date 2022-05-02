@@ -1,0 +1,118 @@
+package o;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+@Metadata(bv = {1, 0, 3}, d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0010\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\b\b\u0018\u00002\u00020\u0001B#\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003\u0012\b\u0010\u0004\u001a\u0004\u0018\u00010\u0003\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0006J\u000b\u0010\u000f\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010\u0010\u001a\u0004\u0018\u00010\u0003HÆ\u0003J\u000b\u0010\u0011\u001a\u0004\u0018\u00010\u0003HÆ\u0003J-\u0010\u0012\u001a\u00020\u00002\n\b\u0002\u0010\u0002\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0004\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u0003HÆ\u0001J\u0013\u0010\u0013\u001a\u00020\u00142\b\u0010\u0015\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u0016\u001a\u00020\u0017HÖ\u0001J\t\u0010\u0018\u001a\u00020\u0003HÖ\u0001R\u001c\u0010\u0005\u001a\u0004\u0018\u00010\u0003X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u001c\u0010\u0004\u001a\u0004\u0018\u00010\u0003X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\b\"\u0004\b\f\u0010\nR\u001c\u0010\u0002\u001a\u0004\u0018\u00010\u0003X\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\b\"\u0004\b\u000e\u0010\n¨\u0006\u0019"}, d2 = {"Lid/dana/data/loyalty/repository/source/network/response/LoyaltyResultInfo;", "", "status", "", "message", "activityErrorType", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", "getActivityErrorType", "()Ljava/lang/String;", "setActivityErrorType", "(Ljava/lang/String;)V", "getMessage", "setMessage", "getStatus", "setStatus", "component1", "component2", "component3", "copy", "equals", "", "other", "hashCode", "", "toString", "data_productionRelease"}, k = 1, mv = {1, 4, 2})
+public final class com_alibaba_ariver_app_api_ExtOpt$86$1 {
+    @Nullable
+    private String activityErrorType;
+    @Nullable
+    private String message;
+    @Nullable
+    private String status;
+
+    public static /* synthetic */ com_alibaba_ariver_app_api_ExtOpt$86$1 copy$default(com_alibaba_ariver_app_api_ExtOpt$86$1 com_alibaba_ariver_app_api_extopt_86_1, String str, String str2, String str3, int i, Object obj) {
+        if ((i & 1) != 0) {
+            str = com_alibaba_ariver_app_api_extopt_86_1.status;
+        }
+        if ((i & 2) != 0) {
+            str2 = com_alibaba_ariver_app_api_extopt_86_1.message;
+        }
+        if ((i & 4) != 0) {
+            str3 = com_alibaba_ariver_app_api_extopt_86_1.activityErrorType;
+        }
+        return com_alibaba_ariver_app_api_extopt_86_1.copy(str, str2, str3);
+    }
+
+    @Nullable
+    public final String component1() {
+        return this.status;
+    }
+
+    @Nullable
+    public final String component2() {
+        return this.message;
+    }
+
+    @Nullable
+    public final String component3() {
+        return this.activityErrorType;
+    }
+
+    @NotNull
+    public final com_alibaba_ariver_app_api_ExtOpt$86$1 copy(@Nullable String str, @Nullable String str2, @Nullable String str3) {
+        return new com_alibaba_ariver_app_api_ExtOpt$86$1(str, str2, str3);
+    }
+
+    public final boolean equals(@Nullable Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof com_alibaba_ariver_app_api_ExtOpt$86$1)) {
+            return false;
+        }
+        com_alibaba_ariver_app_api_ExtOpt$86$1 com_alibaba_ariver_app_api_extopt_86_1 = (com_alibaba_ariver_app_api_ExtOpt$86$1) obj;
+        return Intrinsics.areEqual((Object) this.status, (Object) com_alibaba_ariver_app_api_extopt_86_1.status) && Intrinsics.areEqual((Object) this.message, (Object) com_alibaba_ariver_app_api_extopt_86_1.message) && Intrinsics.areEqual((Object) this.activityErrorType, (Object) com_alibaba_ariver_app_api_extopt_86_1.activityErrorType);
+    }
+
+    public final int hashCode() {
+        String str = this.status;
+        int i = 0;
+        int hashCode = (str != null ? str.hashCode() : 0) * 31;
+        String str2 = this.message;
+        int hashCode2 = (hashCode + (str2 != null ? str2.hashCode() : 0)) * 31;
+        String str3 = this.activityErrorType;
+        if (str3 != null) {
+            i = str3.hashCode();
+        }
+        return hashCode2 + i;
+    }
+
+    @NotNull
+    public final String toString() {
+        StringBuilder sb = new StringBuilder("LoyaltyResultInfo(status=");
+        sb.append(this.status);
+        sb.append(", message=");
+        sb.append(this.message);
+        sb.append(", activityErrorType=");
+        sb.append(this.activityErrorType);
+        sb.append(")");
+        return sb.toString();
+    }
+
+    public com_alibaba_ariver_app_api_ExtOpt$86$1(@Nullable String str, @Nullable String str2, @Nullable String str3) {
+        this.status = str;
+        this.message = str2;
+        this.activityErrorType = str3;
+    }
+
+    @Nullable
+    public final String getStatus() {
+        return this.status;
+    }
+
+    public final void setStatus(@Nullable String str) {
+        this.status = str;
+    }
+
+    @Nullable
+    public final String getMessage() {
+        return this.message;
+    }
+
+    public final void setMessage(@Nullable String str) {
+        this.message = str;
+    }
+
+    @Nullable
+    public final String getActivityErrorType() {
+        return this.activityErrorType;
+    }
+
+    public final void setActivityErrorType(@Nullable String str) {
+        this.activityErrorType = str;
+    }
+}

@@ -1,0 +1,120 @@
+package com.iap.ac.android.acs.plugin.ui.activity;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import androidx.annotation.Nullable;
+import com.google.common.base.Ascii;
+import com.iap.ac.android.acs.plugin.utils.MonitorUtil;
+import java.util.Random;
+import o.dispatchOnCancelled;
+import o.onCancelLoad;
+import o.onCanceled;
+import o.registerOnLoadCanceledListener;
+
+public class ThirdPartyBackActivity extends Activity {
+    public static final int length = 196;
+    public static final byte[] setMin = {94, 74, 112, 89, 22, -45, 42, -22, 0, Ascii.NAK, 0, -24, Ascii.FS, -30, 51, -42, -5, Ascii.DC4, -34, 39, Ascii.NAK, -18, -39, Ascii.US, Ascii.US, -5, -47, 42, -4, -9, -20, Ascii.GS, -8, Ascii.VT, -24, Ascii.RS, 10, -3, Ascii.FS, -17, 35, -43, -24, 40, -37, Framer.ENTER_FRAME_PREFIX, 43, -31, 22, -26, -29, Ascii.GS, Ascii.US, -27, -22, 38, 22, -38, 52, -27, -20, Ascii.SI, -27, Ascii.ESC, Ascii.US, -26, Framer.ENTER_FRAME_PREFIX, -18, 0, -16, -19, 32, Ascii.VT, -12, -22, Ascii.RS, -7, 3, 38, -27, -7, 9, 37, -9, -25, 1, 42, -9, Ascii.CAN, -46, -17, Framer.STDOUT_FRAME_PREFIX, 22, -45, 39, -19, -1, -15, 53, -19, -27, 5, 36, -17, 1, -4, 42, -47, 35, 8, -62, 53, 13, -22, Ascii.CAN, -4, -17, 38, -12, -13, -1, -32, 56, -6, -26, -12, 57, -12, Ascii.SO, -27, Ascii.SUB, -24, Ascii.FS, -29, 35, -16, 0, -32, 53, -26, 36, -26, Ascii.US, -10, Ascii.FF, -21, Ascii.DC4, -2, -27, 9, Ascii.FS, -3, -46, 32, 38, -25, -37, 37, Ascii.DC4, -3, Ascii.FF, -25, 42, -21, -9, 0, Ascii.DC4, -3, Ascii.FF, -22, 34, -26, -37, 9, 61, -41, 39, -60, Ascii.SI, -8, Ascii.VT, -7, 4, Ascii.VT, -23, 10, 62, -42, -13};
+
+    /* JADX WARNING: Removed duplicated region for block: B:8:0x0028  */
+    /* Code decompiled incorrectly, please refer to instructions dump. */
+    private static java.lang.String setMin(byte r6, short r7, byte r8) {
+        /*
+            int r8 = r8 * 165
+            int r8 = r8 + 11
+            byte[] r0 = setMin
+            int r6 = r6 * 175
+            int r6 = r6 + 4
+            int r7 = r7 * 45
+            int r7 = r7 + 56
+            byte[] r1 = new byte[r8]
+            int r8 = r8 + -1
+            r2 = 0
+            if (r0 != 0) goto L_0x001a
+            r3 = r1
+            r4 = 0
+            r1 = r0
+            r0 = r8
+            goto L_0x0030
+        L_0x001a:
+            r3 = 0
+        L_0x001b:
+            byte r4 = (byte) r7
+            r1[r3] = r4
+            int r4 = r3 + 1
+            if (r3 != r8) goto L_0x0028
+            java.lang.String r6 = new java.lang.String
+            r6.<init>(r1, r2)
+            return r6
+        L_0x0028:
+            byte r3 = r0[r6]
+            r5 = r8
+            r8 = r7
+            r7 = r3
+            r3 = r1
+            r1 = r0
+            r0 = r5
+        L_0x0030:
+            int r8 = r8 + r7
+            int r7 = r8 + -2
+            int r6 = r6 + 1
+            r8 = r0
+            r0 = r1
+            r1 = r3
+            r3 = r4
+            goto L_0x001b
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.iap.ac.android.acs.plugin.ui.activity.ThirdPartyBackActivity.setMin(byte, short, byte):java.lang.String");
+    }
+
+    /* access modifiers changed from: protected */
+    public void onCreate(@Nullable Bundle bundle) {
+        int length2;
+        int min;
+        int max;
+        byte[] bArr = setMin;
+        byte b = (byte) bArr[85];
+        String min2 = setMin((byte) bArr[8], b, (byte) b);
+        byte[] bArr2 = setMin;
+        byte b2 = (byte) bArr2[8];
+        String min3 = setMin((byte) bArr2[85], b2, (byte) b2);
+        Context baseContext = getBaseContext();
+        Context context = null;
+        Context applicationContext = (baseContext == null || baseContext.getApplicationContext() == null) ? null : baseContext.getApplicationContext();
+        if (applicationContext != null) {
+            registerOnLoadCanceledListener.setMin().getMax(applicationContext, min2, min3);
+        }
+        int nextInt = new Random().nextInt(Integer.MAX_VALUE);
+        int length3 = dispatchOnCancelled.length(nextInt);
+        if (nextInt != length3) {
+            onCanceled oncanceled = new onCanceled(nextInt, length3, 1);
+            onCancelLoad.setMax(-686424141, oncanceled);
+            onCancelLoad.getMin(-686424141, oncanceled);
+        }
+        Context baseContext2 = getBaseContext();
+        Context applicationContext2 = baseContext2 != null ? baseContext2.getApplicationContext() : null;
+        if (!(applicationContext2 == null || -686424141 == (max = dispatchOnCancelled.getMax(applicationContext2, -686424141)))) {
+            onCanceled oncanceled2 = new onCanceled(-686424141, max, 512);
+            onCancelLoad.setMax(-686424141, oncanceled2);
+            onCancelLoad.getMin(-686424141, oncanceled2);
+        }
+        Context baseContext3 = getBaseContext();
+        if (baseContext3 != null) {
+            context = baseContext3.getApplicationContext();
+        }
+        if (!(context == null || (length2 = context.fileList().length) == (min = dispatchOnCancelled.setMin(context, length2)))) {
+            onCanceled oncanceled3 = new onCanceled(length2, min, 8);
+            onCancelLoad.setMax(-686424141, oncanceled3);
+            onCancelLoad.getMin(-686424141, oncanceled3);
+        }
+        int max2 = dispatchOnCancelled.getMax(0);
+        if (max2 != 0) {
+            onCanceled oncanceled4 = new onCanceled(0, max2, 16);
+            onCancelLoad.setMax(-686424141, oncanceled4);
+            onCancelLoad.getMin(-686424141, oncanceled4);
+        }
+        super.onCreate(bundle);
+        MonitorUtil.monitorOpenSchemeBack();
+        finish();
+    }
+}
